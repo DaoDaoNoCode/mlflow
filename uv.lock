@@ -10,11 +10,12 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-04-20T11:22:54.774436496Z"
+exclude-newer = "0001-01-01T00:00:00Z" # This has no effect and is included for backwards compatibility when using relative exclude-newer values.
 exclude-newer-span = "P14D"
 
 [options.exclude-newer-package]
 torchvision = false
+mlflow-kubernetes-plugins = false
 torch = false
 
 [manifest]
