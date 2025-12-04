@@ -961,6 +961,7 @@ module.exports = {
   "mlflow.experiment-page.header.back-icon-button": "",
   "mlflow.experiment-page.header.docs-link": "",
   "mlflow.experiment-page.header.docs-link-button": "",
+  "mlflow.experiment-page.side-nav": "",
 
   // -- mlflow.experiment-scorers --
   "mlflow.experiment-scorers.add-variable-button": "",
@@ -1438,6 +1439,7 @@ module.exports = {
   "mlflow.home.create_workspace_modal.workspace_description_input": "",
   "mlflow.home.create_workspace_modal.workspace_name_input": "",
   "mlflow.home.demo-banner.launch": "",
+  "mlflow.home.experiments-section": "",
   "mlflow.home.experiments.create": "",
   "mlflow.home.experiments.error": "",
   "mlflow.home.experiments.retry": "",
