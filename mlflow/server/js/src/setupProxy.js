@@ -12,19 +12,18 @@ module.exports = function (app) {
   const proxyStaticTarget = process.env.MLFLOW_STATIC_PROXY || proxyTarget;
   // eslint-disable-next-line no-undef
   const trackingToken = process.env.MLFLOW_TRACKING_TOKEN;
-  // eslint-disable-next-line no-undef
-  const pathPrefix = process.env.MLFLOW_PATH_PREFIX || '';
 
-  const onProxyReq = trackingToken
-    ? (proxyReq) => proxyReq.setHeader('Authorization', `Bearer ${trackingToken}`)
-    : undefined;
+  const onProxyReq = (proxyReq) => {
+    if (trackingToken) {
+      proxyReq.setHeader('Authorization', `Bearer ${trackingToken}`);
+    }
+  };
 
   app.use(
     createProxyMiddleware('/ajax-api', {
       target: proxyTarget,
       changeOrigin: true,
       secure: false, // Allow self-signed certs in development
-      pathRewrite: pathPrefix ? { '^/ajax-api': `${pathPrefix}/ajax-api` } : undefined,
       onProxyReq,
     }),
   );
@@ -33,7 +32,6 @@ module.exports = function (app) {
       target: proxyTarget,
       changeOrigin: true,
       secure: false, // Allow self-signed certs in development
-      pathRewrite: pathPrefix ? { '^/graphql': `${pathPrefix}/graphql` } : undefined,
       onProxyReq,
     }),
   );
@@ -43,7 +41,6 @@ module.exports = function (app) {
       ws: true,
       changeOrigin: true,
       secure: false, // Allow self-signed certs in development
-      pathRewrite: pathPrefix ? { '^/get-artifact': `${pathPrefix}/get-artifact` } : undefined,
       onProxyReq,
     }),
   );
@@ -53,9 +50,6 @@ module.exports = function (app) {
       ws: true,
       changeOrigin: true,
       secure: false, // Allow self-signed certs in development
-      pathRewrite: pathPrefix
-        ? { '^/model-versions/get-artifact': `${pathPrefix}/model-versions/get-artifact` }
-        : undefined,
       onProxyReq,
     }),
   );
