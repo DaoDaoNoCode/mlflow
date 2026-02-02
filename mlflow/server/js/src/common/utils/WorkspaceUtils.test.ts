@@ -211,11 +211,46 @@ describe('WorkspaceUtils', () => {
   });
 
   describe('getActiveWorkspace', () => {
-    it('returns the active workspace', () => {
-      expect(getActiveWorkspace()).toBeNull();
+    const originalHash = window.location.hash;
 
+    afterEach(() => {
+      // Restore original hash
+      window.location.hash = originalHash;
+    });
+
+    it('returns null when no workspace is set', () => {
+      expect(getActiveWorkspace()).toBeNull();
+    });
+
+    it('returns workspace from localStorage when no URL hash', () => {
       setActiveWorkspace('workspace-1');
       expect(getActiveWorkspace()).toBe('workspace-1');
+    });
+
+    it('returns workspace from URL hash (priority over localStorage)', () => {
+      // Set localStorage workspace
+      setActiveWorkspace('old-workspace');
+
+      // Set URL hash (simulating iframe navigation to new workspace)
+      window.location.hash = '#/workspaces/new-workspace/experiments';
+
+      // Should return workspace from URL, not localStorage
+      expect(getActiveWorkspace()).toBe('new-workspace');
+    });
+
+    it('falls back to localStorage when URL hash has no workspace', () => {
+      setActiveWorkspace('stored-workspace');
+      window.location.hash = '#/experiments';
+
+      expect(getActiveWorkspace()).toBe('stored-workspace');
+    });
+
+    it('returns null when workspaces feature is disabled', () => {
+      getWorkspacesEnabledSyncMock.mockReturnValue(false);
+      setActiveWorkspace('workspace-1');
+      window.location.hash = '#/workspaces/url-workspace/experiments';
+
+      expect(getActiveWorkspace()).toBeNull();
     });
   });
 

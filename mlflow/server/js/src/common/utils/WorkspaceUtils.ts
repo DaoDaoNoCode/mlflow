@@ -23,16 +23,31 @@ const listeners = new Set<(workspace: string | null) => void>();
 /**
  * Get the currently active workspace name.
  * Returns null if workspaces feature is not enabled or no workspace is selected.
+ *
+ * Priority: URL hash > localStorage
+ * MLflow uses a hash router, so the path is in window.location.hash.
+ * We reuse extractWorkspaceFromPathname for consistent parsing.
  */
 export const getActiveWorkspace = () => {
-  // Only return the active workspace if the workspaces feature is enabled
   if (!getWorkspacesEnabledSync()) {
     return null;
   }
+
+  // Try to get workspace from URL hash (hash router: #/workspaces/my-workspace/...)
+  if (typeof window !== 'undefined' && window.location?.hash) {
+    const hashPath = window.location.hash.slice(1); // Remove leading '#'
+    const workspaceFromUrl = extractWorkspaceFromPathname(hashPath);
+    if (workspaceFromUrl) {
+      return workspaceFromUrl;
+    }
+  }
+
+  // Fallback to cached value
   return activeWorkspace;
 };
 
 export const setActiveWorkspace = (workspace: string | null) => {
+  const previousWorkspace = activeWorkspace;
   activeWorkspace = workspace;
   if (typeof window !== 'undefined') {
     try {
@@ -45,7 +60,10 @@ export const setActiveWorkspace = (workspace: string | null) => {
       // no-op: localStorage might be unavailable (e.g., private browsing)
     }
   }
-  listeners.forEach((listener) => listener(activeWorkspace));
+  // Only notify listeners if workspace actually changed
+  if (previousWorkspace !== workspace) {
+    listeners.forEach((listener) => listener(activeWorkspace));
+  }
 };
 
 // Workspace name validation constants (must match backend: mlflow/store/workspace/abstract_store.py)

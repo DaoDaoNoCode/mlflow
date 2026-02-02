@@ -27,7 +27,7 @@ import { useInitializeExperimentRunColors } from './experiment-tracking/componen
 import { MlflowSidebar } from './common/components/MlflowSidebar';
 import { AssistantProvider, AssistantRouteContextProvider } from './assistant';
 import { RootAssistantLayout } from './common/components/RootAssistantLayout';
-import { extractWorkspaceFromPathname, setActiveWorkspace, getActiveWorkspace } from './common/utils/WorkspaceUtils';
+import { extractWorkspaceFromPathname, setActiveWorkspace } from './common/utils/WorkspaceUtils';
 import { prefixRoutePathWithWorkspace } from './common/utils/WorkspaceRouteUtils';
 import { useWorkspaces } from './common/hooks/useWorkspaces';
 
@@ -116,7 +116,6 @@ const WorkspaceRouterSync = ({ workspacesEnabled }: { workspacesEnabled: boolean
     }
 
     const workspaceFromPath = extractWorkspaceFromPathname(location.pathname);
-    const activeWorkspace = getActiveWorkspace();
 
     if (isLoading) {
       return;
@@ -130,9 +129,8 @@ const WorkspaceRouterSync = ({ workspacesEnabled }: { workspacesEnabled: boolean
         navigate('/', { replace: true });
         return;
       }
-      if (activeWorkspace !== workspaceFromPath) {
-        setActiveWorkspace(workspaceFromPath);
-      }
+      // Always call setActiveWorkspace - it only notifies listeners if value changed
+      setActiveWorkspace(workspaceFromPath);
       return;
     }
 
