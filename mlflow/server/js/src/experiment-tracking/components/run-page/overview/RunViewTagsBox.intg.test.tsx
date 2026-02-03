@@ -14,6 +14,10 @@ jest.mock('../../../actions', () => ({
   setRunTagsBulkApi: jest.fn(() => ({ type: 'setRunTagsBulkApi', payload: Promise.resolve() })),
 }));
 
+jest.mock('../../../../common/utils/ServerFeaturesContext', () => ({
+  getWorkspacesEnabledSync: () => false,
+}));
+
 describe('RunViewTagsBox integration', () => {
   const onTagsUpdated = jest.fn();
 

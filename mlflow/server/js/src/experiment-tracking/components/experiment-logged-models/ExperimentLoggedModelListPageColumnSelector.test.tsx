@@ -9,6 +9,10 @@ import {
 } from './hooks/useExperimentLoggedModelListPageTableColumns';
 import { ExperimentLoggedModelListPageColumnSelector } from './ExperimentLoggedModelListPageColumnSelector';
 
+jest.mock('../../../common/utils/ServerFeaturesContext', () => ({
+  getWorkspacesEnabledSync: () => false,
+}));
+
 const getMetric = (key: string, datasetName: string | undefined) => ({
   key,
   value: 1000,
