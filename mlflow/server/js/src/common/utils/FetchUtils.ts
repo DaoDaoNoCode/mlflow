@@ -59,6 +59,14 @@ export const getDefaultHeaders = (cookieStr: any) => {
 };
 
 export const getAjaxUrl = (relativeUrl: any) => {
+  // In federated mode (Module Federation), API calls need to be prefixed with the
+  // MLflow proxy base path (e.g. '/mlflow') so they route through the same-origin
+  // gateway to the MLflow tracking server.
+  const baseUrl = process.env['MLFLOW_API_BASE_URL'] || '';
+  if (baseUrl) {
+    const separator = relativeUrl.startsWith('/') ? '' : '/';
+    return `${baseUrl}${separator}${relativeUrl}`;
+  }
   if (process.env['MLFLOW_USE_ABSOLUTE_AJAX_URLS'] === 'true' && !relativeUrl.startsWith('/')) {
     return '/' + relativeUrl;
   }
