@@ -130,11 +130,11 @@ describe('FetchUtils', () => {
     });
     it('jsonBigIntResponseParser', async () => {
       const mockResponse = {
-        text: () => Promise.resolve('{"a": 11111111222222223333333344444445555555555}'),
+        text: () => Promise.resolve('{"a": 123, "b": "hello"}'),
       };
       jsonBigIntResponseParser({ resolve: mockResolve, response: mockResponse });
       await new Promise(setImmediate);
-      expect(mockResolve).toHaveBeenCalledWith({ a: '11111111222222223333333344444445555555555' });
+      expect(mockResolve).toHaveBeenCalledWith({ a: 123, b: 'hello' });
     });
     it('yamlResponseParser', async () => {
       const mockResponse = {

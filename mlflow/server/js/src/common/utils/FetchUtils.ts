@@ -87,11 +87,23 @@ export const parseResponse = ({ resolve, response, parser }: any) => {
 export const defaultResponseParser = ({ resolve, response }: any) =>
   parseResponse({ resolve, response, parser: JSON.parse });
 
+// json-bigint@1.0.0 (upstream) has two breaking behaviors vs the Databricks fork
+// (databricks/json-bigint#a1defaf) that was previously used:
+// 1. Creates parsed objects with Object.create(null) (no prototype), which breaks
+//    .hasOwnProperty() calls in RecordUtils.fromJs and Immutable.fromJS().
+// 2. Any number whose string form exceeds 15 characters is converted to a string
+//    (e.g., 0.00011124613492593128 → "0.00011124613492593128"), which breaks code
+//    expecting numbers (e.g., formatMetric calling .toExponential()).
+// Both issues cannot be safely fixed post-parse because we cannot distinguish
+// json-bigint-stringified numbers from genuine JSON string values (like param values).
+// Since MLflow's numeric IDs and timestamps all fit within Number.MAX_SAFE_INTEGER,
+// standard JSON.parse is used instead. If BigInt support is ever needed, switch back
+// to the Databricks fork of json-bigint which handles both issues correctly at parse time.
 export const jsonBigIntResponseParser = ({ resolve, response }: any) =>
   parseResponse({
     resolve,
     response,
-    parser: JsonBigInt({ strict: true, storeAsString: true }).parse,
+    parser: JSON.parse,
   });
 
 export const yamlResponseParser = ({ resolve, response }: any) =>
