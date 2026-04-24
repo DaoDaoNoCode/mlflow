@@ -1,7 +1,6 @@
 import { MLFLOW_PUBLISHED_VERSION } from '../../common/mlflow-published-version';
 import { isIntegrated } from '../../common/utils/embedUtils';
 import type {
-  BaseTrackingEventProperties,
   FormTrackingEventProperties,
   IdentifyEventProperties,
   LinkTrackingEventProperties,
@@ -10,16 +9,16 @@ import type {
 
 type WindowWithSegment = Window & {
   analytics?: {
-    track: (event: string, properties?: object, context?: object) => void;
-    page: (category?: string, properties?: object, context?: object) => void;
-    identify: (userId?: string, traits?: object) => void;
+    track: (event: string, properties?: Record<string, unknown>, context?: Record<string, unknown>) => void;
+    page: (category?: string, properties?: Record<string, unknown>, context?: Record<string, unknown>) => void;
+    identify: (userId?: string, traits?: Record<string, unknown>) => void;
   };
   clusterID?: string;
 };
 
 const win = window as WindowWithSegment;
 
-const fireTrackingEvent = (eventName: string, properties: BaseTrackingEventProperties): void => {
+const fireTrackingEvent = (eventName: string, properties: Record<string, unknown>): void => {
   const clusterID = win.clusterID ?? '';
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console
