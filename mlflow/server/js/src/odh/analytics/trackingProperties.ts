@@ -4,10 +4,11 @@ export type IdentifyEventProperties = {
   canCreateProjects: boolean;
 };
 
-export const enum TrackingOutcome {
-  submit = 'submit',
-  cancel = 'cancel',
-}
+export const TrackingOutcome = {
+  submit: 'submit',
+  cancel: 'cancel',
+} as const;
+export type TrackingOutcome = (typeof TrackingOutcome)[keyof typeof TrackingOutcome];
 
 export type BaseFormTrackingEventProperties = {
   outcome: TrackingOutcome;
