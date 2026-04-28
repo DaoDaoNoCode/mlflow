@@ -18,15 +18,20 @@ type WindowWithSegment = Window & {
 
 const win = window as WindowWithSegment;
 
+const getClusterID = (): string => win.clusterID ?? '';
+
 const fireTrackingEvent = (eventName: string, properties: Record<string, unknown>): void => {
-  const clusterID = win.clusterID ?? '';
   if (process.env['NODE_ENV'] === 'development' && isIntegrated()) {
     // eslint-disable-next-line no-console
     console.log(
       `Telemetry event triggered: ${eventName} - ${JSON.stringify(properties)} for version ${MLFLOW_PUBLISHED_VERSION}`,
     );
   } else if (isIntegrated() && win.analytics) {
-    win.analytics.track(eventName, { ...properties, clusterID }, { app: { version: MLFLOW_PUBLISHED_VERSION } });
+    win.analytics.track(
+      eventName,
+      { ...properties, clusterID: getClusterID() },
+      { app: { version: MLFLOW_PUBLISHED_VERSION } },
+    );
   }
 };
 
@@ -43,7 +48,7 @@ export const fireSimpleTrackingEvent = (eventName: string): void => {
 };
 
 export const fireMiscTrackingEvent = (eventName: string, properties: MiscTrackingEventProperties): void => {
-  if (process.env['NODE_ENV'] === 'development') {
+  if (process.env['NODE_ENV'] === 'development' && isIntegrated()) {
     // eslint-disable-next-line no-console
     console.warn('This tracking event type is a last resort for legacy purposes');
   }
@@ -51,23 +56,21 @@ export const fireMiscTrackingEvent = (eventName: string, properties: MiscTrackin
 };
 
 export const firePageEvent = (): void => {
-  const clusterID = win.clusterID ?? '';
   if (process.env['NODE_ENV'] === 'development' && isIntegrated()) {
     // eslint-disable-next-line no-console
-    console.log(`Page event triggered for version ${MLFLOW_PUBLISHED_VERSION}: ${window.location.pathname}`);
+    console.log(`Page event triggered for version ${MLFLOW_PUBLISHED_VERSION}: ${win.location.pathname}`);
   } else if (isIntegrated() && win.analytics) {
-    win.analytics.page(undefined, { clusterID }, { app: { version: MLFLOW_PUBLISHED_VERSION } });
+    win.analytics.page(undefined, { clusterID: getClusterID() }, { app: { version: MLFLOW_PUBLISHED_VERSION } });
   }
 };
 
 export const fireIdentifyEvent = (properties: IdentifyEventProperties): void => {
-  const clusterID = win.clusterID ?? '';
   if (process.env['NODE_ENV'] === 'development' && isIntegrated()) {
     // eslint-disable-next-line no-console
     console.log(`Identify event triggered: ${JSON.stringify(properties)}`);
   } else if (isIntegrated() && win.analytics) {
     win.analytics.identify(properties.userID, {
-      clusterID,
+      clusterID: getClusterID(),
       isAdmin: properties.isAdmin,
       canCreateProjects: properties.canCreateProjects,
     });
