@@ -32,6 +32,8 @@ import { shouldEnableWorkspaces } from '../../common/utils/FeatureUtils';
 import { extractWorkspaceFromSearchParams } from '../../workspaces/utils/WorkspaceUtils';
 import { useSearchParams } from '../../common/utils/RoutingUtils';
 import { useIsIntegrated } from '../../common/utils/embedUtils';
+import { fireMiscTrackingEvent } from '../../odh/analytics/segmentUtils';
+import { MLflowEventNames } from '../../odh/analytics/trackingProperties';
 
 export const ExperimentListView = () => {
   const [searchParams] = useSearchParams();
@@ -98,6 +100,9 @@ export const ExperimentListView = () => {
   const showCreationButtons = !isEmptyState && (!workspacesEnabled || workspaceFromUrl !== null);
 
   const pushExperimentRoute = () => {
+    fireMiscTrackingEvent(MLflowEventNames.EXPERIMENT_COMPARISON_STARTED, {
+      experimentCount: checkedKeys.length,
+    });
     const route = Routes.getCompareExperimentsPageRoute(checkedKeys);
     navigate(route);
   };

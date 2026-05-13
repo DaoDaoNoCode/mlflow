@@ -12,6 +12,15 @@ export const TrackingOutcome = {
 export const MLflowEventNames = {
   EXPERIMENT_CREATED: 'MLflow Experiment Created',
   NEW_RUN_CREATED: 'MLflow New Run Created',
+  EXPERIMENT_COMPARISON_STARTED: 'MLflow Experiment Comparison Started',
+  EXPERIMENT_DELETED: 'MLflow Experiment Deleted',
+  COMPARISON_TABLE_VIEWED: 'MLflow Comparison Table Viewed',
+  RUNS_COLUMN_MODIFIED: 'MLflow Runs Column Modified',
+} as const;
+
+export const RunsColumnAction = {
+  added: 'added',
+  removed: 'removed',
 } as const;
 
 export type BaseFormTrackingEventProperties = {

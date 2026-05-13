@@ -18,6 +18,8 @@ import CompareRunContour from './CompareRunContour';
 import Routes from '../routes';
 import { Link } from '../../common/utils/RoutingUtils';
 import { isIntegrated } from '../../common/utils/embedUtils';
+import { fireMiscTrackingEvent } from '../../odh/analytics/segmentUtils';
+import { MLflowEventNames } from '../../odh/analytics/trackingProperties';
 import { getLatestMetrics } from '../reducers/MetricReducer';
 import CompareRunUtil from './CompareRunUtil';
 import Utils from '../../common/utils/Utils';
@@ -50,6 +52,9 @@ class CompareRunView extends Component<CompareRunViewProps, CompareRunViewState>
   compareRunViewRef: any;
   runDetailsTableRef: any;
   compareRunMetricTableRef: React.MutableRefObject<CompareRunMetricTableRef | null>;
+  private mountTime = 0;
+  private tableViewedFired = false;
+  private tableObserver: IntersectionObserver | null = null;
 
   constructor(props: CompareRunViewProps) {
     super(props);
@@ -93,6 +98,7 @@ class CompareRunView extends Component<CompareRunViewProps, CompareRunViewState>
   }
 
   componentDidMount() {
+    this.mountTime = Date.now();
     const pageTitle = this.props.intl.formatMessage(
       {
         description: 'Page title for the compare runs page',
@@ -106,11 +112,27 @@ class CompareRunView extends Component<CompareRunViewProps, CompareRunViewState>
 
     window.addEventListener('resize', this.onResizeHandler, true);
     window.dispatchEvent(new Event('resize'));
+
+    const tableEl = this.runDetailsTableRef.current;
+    if (tableEl && !this.tableViewedFired && typeof IntersectionObserver !== 'undefined') {
+      this.tableObserver = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting && !this.tableViewedFired) {
+          this.tableViewedFired = true;
+          fireMiscTrackingEvent(MLflowEventNames.COMPARISON_TABLE_VIEWED, {
+            experimentCount: this.props.experiments.length,
+            timeToScroll: Date.now() - this.mountTime,
+          });
+          this.tableObserver?.disconnect();
+        }
+      });
+      this.tableObserver.observe(tableEl);
+    }
   }
 
   componentWillUnmount() {
     // Avoid registering `onResizeHandler` every time this component mounts
     window.removeEventListener('resize', this.onResizeHandler, true);
+    this.tableObserver?.disconnect();
   }
 
   getTableColumnWidth() {

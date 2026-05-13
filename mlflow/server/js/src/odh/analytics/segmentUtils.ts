@@ -1,3 +1,4 @@
+import { COLUMN_TYPES } from '../../experiment-tracking/constants';
 import { MLFLOW_PUBLISHED_VERSION } from '../../common/mlflow-published-version';
 import { isIntegrated } from '../../common/utils/embedUtils';
 import { ErrorWrapper } from '../../common/utils/ErrorWrapper';
@@ -76,6 +77,19 @@ export const fireIdentifyEvent = (properties: IdentifyEventProperties): void => 
       canCreateProjects: properties.canCreateProjects,
     });
   }
+};
+
+export const getSafeColumnName = (canonicalKey: string): { columnType: string; columnName: string } => {
+  const types = Object.values(COLUMN_TYPES);
+  for (const type of types) {
+    if (canonicalKey.startsWith(type)) {
+      return {
+        columnType: type,
+        columnName: type === COLUMN_TYPES.ATTRIBUTES ? canonicalKey : '__private__',
+      };
+    }
+  }
+  return { columnType: 'unknown', columnName: '__private__' };
 };
 
 export const getTrackingError = (e: unknown): string => {
