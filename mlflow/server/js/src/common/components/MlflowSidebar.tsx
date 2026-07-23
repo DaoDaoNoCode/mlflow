@@ -6,6 +6,7 @@ import {
   CloudModelIcon,
   DropdownMenu,
   GearIcon,
+  GridIcon,
   HomeIcon,
   ModelsIcon,
   TextBoxIcon,
@@ -389,9 +390,20 @@ export function MlflowSidebar({
           >
             <span css={{ display: 'flex', alignItems: 'center', gap: theme.spacing.sm }}>
               <FormattedMessage defaultMessage="Docs" description="Sidebar link for docs page" />
-              <NewWindowIcon css={{ fontSize: theme.typography.fontSizeBase }} />
             </span>
           </MlflowSidebarLink>
+          {process.env['NODE_ENV'] === 'development' && (
+            <MlflowSidebarLink
+              css={{ paddingBlock: theme.spacing.sm }}
+              to="/page-composer"
+              componentId="mlflow.sidebar.page_composer_link"
+              isActive={(loc) => loc.pathname === '/page-composer'}
+              icon={<GridIcon />}
+              collapsed={!showSidebar}
+            >
+              Composer
+            </MlflowSidebarLink>
+          )}
           {showWorkspaceMenuItems && !showNestedSettingsItems && (
             <MlflowSidebarLink
               css={{ paddingBlock: theme.spacing.sm }}

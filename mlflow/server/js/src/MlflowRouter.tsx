@@ -48,7 +48,7 @@ import { useWorkspaces } from './workspaces/hooks/useWorkspaces';
 // Lazy-load so the switcher (which stores plaintext passwords in
 // localStorage and manipulates auth cookies) doesn't get pulled into the
 // production bundle. ``DEV_USER_SWITCHER_ENABLED`` is also gated at build
-// time on ``process.env.NODE_ENV === 'development'``, so the import never
+// time on ``process.env['NODE_ENV'] === 'development'``, so the import never
 // fires in production.
 const LazyDevUserSwitcher = React.lazy(() =>
   import('./admin/DevUserSwitcher').then((m) => ({ default: m.DevUserSwitcher })),
@@ -240,6 +240,15 @@ export const MlflowRouter = () => {
       ...getMCPRegistryRouteDefs(),
       ...getAccountRouteDefs(),
       ...getAdminRouteDefs(),
+      ...(process.env['NODE_ENV'] === 'development'
+        ? [
+            {
+              path: '/page-composer',
+              element: createLazyRouteElement(() => import('./page-composer/PageComposer')),
+              pageId: 'mlflow.dev.page-composer',
+            },
+          ]
+        : []),
       ...getCommonRouteDefs(),
     ],
     [],
