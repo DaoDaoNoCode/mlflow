@@ -481,6 +481,18 @@ export function MlflowSidebar({
               <NewWindowIcon css={{ fontSize: theme.typography.fontSizeBase }} />
             </span>
           </MlflowSidebarLink>
+          {process.env['NODE_ENV'] === 'development' && (
+            <MlflowSidebarLink
+              css={{ paddingBlock: theme.spacing.sm }}
+              to="/page-composer"
+              componentId="mlflow.sidebar.page_composer_link"
+              isActive={(loc) => loc.pathname === '/page-composer'}
+              icon={<GridIcon />}
+              collapsed={!showSidebar}
+            >
+              Composer
+            </MlflowSidebarLink>
+          )}
           {showWorkspaceMenuItems && !showNestedSettingsItems && (
             <MlflowSidebarLink
               css={{ paddingBlock: theme.spacing.sm }}

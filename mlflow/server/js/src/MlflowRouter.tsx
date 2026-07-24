@@ -27,10 +27,9 @@ import { getRouteDefs as getCommonRouteDefs } from './common/route-defs';
 import { getGatewayRouteDefs } from './gateway/route-defs';
 import { getAccountRouteDefs } from './account/route-defs';
 import { getAdminRouteDefs } from './admin/route-defs';
-import { getMCPRegistryRouteDefs } from './mcp-registry/route-defs';
 import { DEV_USER_SWITCHER_ENABLED } from './admin/DevUserSwitcher';
-import { shouldEnableAIGateway } from './common/utils/FeatureUtils';
 import { useInitializeExperimentRunColors } from './experiment-tracking/components/experiment-page/hooks/useExperimentRunColor';
+import { IssueDetectionJobNotifications } from './experiment-tracking/components/experiment-page/components/traces-v3/IssueDetectionJobNotifications';
 import { MlflowSidebar } from './common/components/MlflowSidebar';
 import { AssistantProvider, AssistantRouteContextProvider } from './assistant';
 import { RootAssistantLayout } from './common/components/RootAssistantLayout';
@@ -48,7 +47,7 @@ import { useWorkspaces } from './workspaces/hooks/useWorkspaces';
 // Lazy-load so the switcher (which stores plaintext passwords in
 // localStorage and manipulates auth cookies) doesn't get pulled into the
 // production bundle. ``DEV_USER_SWITCHER_ENABLED`` is also gated at build
-// time on ``process.env.NODE_ENV === 'development'``, so the import never
+// time on ``process.env['NODE_ENV'] === 'development'``, so the import never
 // fires in production.
 const LazyDevUserSwitcher = React.lazy(() =>
   import('./admin/DevUserSwitcher').then((m) => ({ default: m.DevUserSwitcher })),
@@ -85,6 +84,7 @@ const MlflowRootLayout = ({
       <div css={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
         <ErrorModal />
         <AppErrorBoundary>
+          <IssueDetectionJobNotifications />
           <RootAssistantLayout>
             <div
               css={{
@@ -235,10 +235,18 @@ export const MlflowRouter = () => {
     () => [
       ...getExperimentTrackingRouteDefs(),
       ...getModelRegistryRouteDefs(),
-      ...(shouldEnableAIGateway() ? getGatewayRouteDefs() : []),
-      ...getMCPRegistryRouteDefs(),
+      ...getGatewayRouteDefs(),
       ...getAccountRouteDefs(),
       ...getAdminRouteDefs(),
+      ...(process.env['NODE_ENV'] === 'development'
+        ? [
+            {
+              path: '/page-composer',
+              element: createLazyRouteElement(() => import('./page-composer/PageComposer')),
+              pageId: 'mlflow.dev.page-composer',
+            },
+          ]
+        : []),
       ...getCommonRouteDefs(),
     ],
     [],

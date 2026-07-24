@@ -10,9 +10,360 @@
  * component (blank by default, especially for generated entries)
  */
 module.exports = {
+  // -- Codegen (auto-generated) --
+  "codegen_mlflow_app_src_common_components_darkthemeswitch.tsx_32": "",
+  "codegen_mlflow_app_src_common_components_editablenote.tsx_114": "",
+  "codegen_mlflow_app_src_common_components_editablenote.tsx_124": "",
+  "codegen_mlflow_app_src_common_components_editablenote.tsx_178": "",
+  "codegen_mlflow_app_src_common_components_editabletagstableview.tsx_107": "",
+  "codegen_mlflow_app_src_common_components_editabletagstableview.tsx_117": "",
+  "codegen_mlflow_app_src_common_components_editabletagstableview.tsx_127": "",
+  "codegen_mlflow_app_src_common_components_iconbutton.tsx_20": "",
+  "codegen_mlflow_app_src_common_components_keyvaluetag.tsx_60": "",
+  "codegen_mlflow_app_src_common_components_keyvaluetagfullviewmodal.tsx_17": "",
+  "codegen_mlflow_app_src_common_components_keyvaluetagseditorcell.tsx_29": "",
+  "codegen_mlflow_app_src_common_components_keyvaluetagseditorcell.tsx_37": "",
+  "codegen_mlflow_app_src_common_components_previewsidebar.tsx_67": "",
+  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_120": "",
+  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_131": "",
+  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_145": "",
+  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_151": "",
+  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_228": "",
+  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_50": "",
+  "codegen_mlflow_app_src_common_components_trimmedtext.tsx_30": "",
+  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_135": "",
+  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_147": "",
+  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_174": "",
+  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_223": "",
+  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_248": "",
+  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_306": "",
+  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_309": "",
+  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_316": "",
+  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_324": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_artifact-view-components_showartifactloggedtableview.tsx_181": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_artifact-view-components_showartifactloggedtableview.tsx_223": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_artifact-view-components_showartifactloggedtableview.tsx_315": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_artifact-view-components_showartifactloggedtableview.tsx_331": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_artifactview.tsx_288": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_artifactview.tsx_337": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_comparerunbox.tsx_46": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_compareruncontour.tsx_282": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_compareruncontour.tsx_299": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_comparerunscatter.tsx_182": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_comparerunview.tsx_570": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_comparerunview.tsx_581": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_comparerunview.tsx_592": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationcellevaluatebutton.tsx_59": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationcreatepromptrunoutput.tsx_144": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationcreatepromptrunoutput.tsx_85": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationcreatepromptrunoutput.tsx_99": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadercellrenderer.tsx_112": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadercellrenderer.tsx_118": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadercellrenderer.tsx_143": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadercellrenderer.tsx_150": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheaderdatasetindicator.tsx_37": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheaderdatasetindicator.tsx_49": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheaderdatasetindicator.tsx_51": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheaderdatasetindicator.tsx_66": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadermodelindicator.tsx_107": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadermodelindicator.tsx_115": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationtableactionscellrenderer.tsx_37": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationtableactionscolumnrenderer.tsx_22": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_createnotebookrunmodal.tsx_111": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_createnotebookrunmodal.tsx_117": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactcompareview.tsx_358": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactcompareview.tsx_414": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactcompareview.tsx_433": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactcompareview.tsx_465": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactviewemptystate.tsx_48": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptparameters.tsx_107": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptparameters.tsx_28": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptparameters.tsx_39": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_541": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_589": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_596": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_597": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_638": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_678": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_694": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_695": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_736": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodalexamples.tsx_42": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodalexamples.tsx_48": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodalexamples.tsx_90": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_hooks_useevaluationaddnewinputsmodal.tsx_57": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_hooks_useevaluationaddnewinputsmodal.tsx_99": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_hooks_useevaluationartifactwriteback.tsx_102": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_hooks_useevaluationartifactwriteback.tsx_110": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewassessmentssection.tsx_149": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewassessmentupsertform.tsx_124": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewassessmentupsertform.tsx_160": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewretrievalsection.tsx_30": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewretrievalsection.tsx_32": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_evaluationsoverview.tsx_576": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_experimentviewnotes.tsx_57": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_header_experimentviewheadersharebutton.tsx_44": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_172": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_184": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_49": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_56": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_75": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_groupparentcellrenderer.tsx_109": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_groupparentcellrenderer.tsx_136": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_loadmorerowrenderer.tsx_20": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_modelscellrenderer.tsx_49": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_rowactionsheadercellrenderer.tsx_52": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_runnamecellrenderer.tsx_46": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetdrawer.tsx_206": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetdrawer.tsx_81": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetlink.tsx_19_1": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetlink.tsx_19_2": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetschema.tsx_92": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetschematable.tsx_57": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetschematable.tsx_58": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetsourceurl.tsx_34": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetwithcontext.tsx_41": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscolumnselector.tsx_300": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscolumnselector.tsx_315": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrols.tsx_175": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactions.tsx_110": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactions.tsx_117": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactions.tsx_126": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactions.tsx_136": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactionsaddnewtagmodal.tsx_34": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactionsaddnewtagmodal.tsx_51": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactionsaddnewtagmodal.tsx_78": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactionsselecttags.tsx_162": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_184": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_201": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_211": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_217": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_248": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_289": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_329": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_338": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_362": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_382": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_402": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_403": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_415": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_461": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_469": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_time_button": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsemptytable.tsx_35": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_168": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_191": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_233": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_244": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_280": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_302": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_306": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_314": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_330": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_342": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_349": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_426": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_436": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunssortselectorv2.tsx_137": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunssortselectorv2.tsx_151": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunssortselectorv2.tsx_97": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunstableaddcolumncta.tsx_218": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_runssearchautocomplete.tsx_212": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_runssearchautocomplete.tsx_236": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_runssearchautocomplete.tsx_310": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_metricchartsaccordion.tsx_82": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_metricsplotcontrols.tsx_120": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_metricsplotcontrols.tsx_154": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_metricsplotcontrols.tsx_220": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_metricsplotcontrols.tsx_222": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_modals_createexperimentform.tsx_51": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_modals_createexperimentform.tsx_71": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_modals_getlinkmodal.tsx_21": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_modals_renameform.tsx_69": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_parallelcoordinatesplotcontrols.tsx_84": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewdatasetbox.tsx_16": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewdatasetbox.tsx_70": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewdatasetbox.tsx_81": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewdescriptionbox.tsx_46": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewmetricstable.tsx_186": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewmetricstable.tsx_312": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewparamstable.tsx_213": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewparamstable.tsx_244": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewparamstable.tsx_74": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewregisteredmodelsbox.tsx_40": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewsourcebox.tsx_48": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewstatusbox.tsx_81": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_195": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_231": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_50": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_58": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_80": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_89": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_90": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewmetricchartsv2.tsx_244": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_262": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_288": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_291": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_298": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_316": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_324": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_334": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_340": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_344": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_350": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_runschartsparallelchartcard.tsx_293": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_runschartsparallelchartcard.tsx_300": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_charts_imagegridmultiplekeyplot.tsx_44": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_charts_imagegridmultiplekeyplot.tsx_52": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfiguredifferencechart.tsx_129": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfiguredifferencechart.tsx_138": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfiguredifferencechart.tsx_157": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfiguredifferencechart.tsx_98": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigureimagechart.tsx_84": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_436": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_474": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_494": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_524": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_628": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_682": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_703": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_716": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_747": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_838": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_112": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_126": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_42": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_56": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_70": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_84": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_98": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsconfiguremodal.tsx_232": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsconfiguremodal.tsx_296": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsfilterinput.tsx_30": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsfullscreenmodal.tsx_53": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_118": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_44": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_68": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_78": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_88": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsnodatafoundindicator.tsx_31": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsyaxismetricandexpressionselector.tsx_122": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsyaxismetricandexpressionselector.tsx_221": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_220": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_321": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_327": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_333": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_351": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_hooks_userunschartstooltip.stories.tsx_42": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_cards_chartcard.common.tsx_158": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_runscompareaddchartmenu.tsx_19": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_runscomparetooltipbody.tsx_259": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_runscomparetooltipbody.tsx_282": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_runscomparetooltipbody.tsx_302": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_sections_runscomparesectionaccordion.tsx_405": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_sections_runscomparesectionheader.tsx_246": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_sections_runscomparesectionheader.tsx_251": "",
+  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_sections_runscomparesectionheader.tsx_288": "",
+  "codegen_mlflow_app_src_model-registry_components_CreateModelButton.tsx_28": "",
+  "codegen_mlflow_app_src_model-registry_components_aliases_modelstablealiasedversionscell.tsx_47": "",
+  "codegen_mlflow_app_src_model-registry_components_aliases_modelstablealiasedversionscell.tsx_57": "",
+  "codegen_mlflow_app_src_model-registry_components_aliases_modelversionaliastag.tsx_23": "",
+  "codegen_mlflow_app_src_model-registry_components_aliases_modelversiontablealiasescell.tsx_30": "",
+  "codegen_mlflow_app_src_model-registry_components_aliases_modelversiontablealiasescell.tsx_41": "",
+  "codegen_mlflow_app_src_model-registry_components_aliases_modelversionviewaliaseditor.tsx_29": "",
+  "codegen_mlflow_app_src_model-registry_components_aliases_modelversionviewaliaseditor.tsx_37": "",
+  "codegen_mlflow_app_src_model-registry_components_createmodelform.tsx_62": "",
+  "codegen_mlflow_app_src_model-registry_components_model-list_modellistfilters.tsx_118": "",
+  "codegen_mlflow_app_src_model-registry_components_model-list_modellistfilters.tsx_152": "",
+  "codegen_mlflow_app_src_model-registry_components_model-list_modellistfilters.tsx_46": "",
+  "codegen_mlflow_app_src_model-registry_components_model-list_modellistfilters.tsx_61": "",
+  "codegen_mlflow_app_src_model-registry_components_model-list_modellisttable.tsx_412": "",
+  "codegen_mlflow_app_src_model-registry_components_model-list_modellisttable.tsx_learn_more": "",
+  "codegen_mlflow_app_src_model-registry_components_model-list_modeltablecellrenderers.tsx_65": "",
+  "codegen_mlflow_app_src_model-registry_components_modellistview.tsx_305": "",
+  "codegen_mlflow_app_src_model-registry_components_modelsnextuipromomodal.tsx_15": "",
+  "codegen_mlflow_app_src_model-registry_components_modelsnextuipromomodal.tsx_26": "",
+  "codegen_mlflow_app_src_model-registry_components_modelsnextuipromomodal.tsx_32": "",
+  "codegen_mlflow_app_src_model-registry_components_modelsnextuitoggleswitch.tsx_39": "",
+  "codegen_mlflow_app_src_model-registry_components_modelsnextuitoggleswitch.tsx_50": "",
+  "codegen_mlflow_app_src_model-registry_components_modelsnextuitoggleswitch.tsx_74": "",
+  "codegen_mlflow_app_src_model-registry_components_modelversiontable.tsx_425": "",
+  "codegen_mlflow_app_src_model-registry_components_modelversiontable.tsx_450": "",
+  "codegen_mlflow_app_src_model-registry_components_modelversiontable.tsx_458": "",
+  "codegen_mlflow_app_src_model-registry_components_modelversiontable.tsx_477": "",
+  "codegen_mlflow_app_src_model-registry_components_modelversionview.tsx_301": "",
+  "codegen_mlflow_app_src_model-registry_components_modelversionview.tsx_516": "",
+  "codegen_mlflow_app_src_model-registry_components_modelversionview_tsx_394": "",
+  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_467": "",
+  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_600": "",
+  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_619": "",
+  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_646": "",
+  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_662": "",
+  "codegen_mlflow_app_src_model-registry_components_promotemodelbutton.tsx_140": "",
+  "codegen_mlflow_app_src_model-registry_components_promotemodelbutton.tsx_165": "",
+  "codegen_mlflow_app_src_model-registry_components_registermodel.tsx_242": "",
+  "codegen_mlflow_app_src_model-registry_components_registermodel.tsx_248": "",
+  "codegen_mlflow_app_src_model-registry_components_registermodel.tsx_261": "",
+  "codegen_mlflow_app_src_model-registry_components_registermodelform.tsx_132": "",
+  "codegen_mlflow_app_src_model-registry_constants.tsx_37": "",
+  "codegen_mlflow_app_src_model-registry_constants.tsx_38": "",
+  "codegen_mlflow_app_src_model-registry_constants.tsx_39": "",
+  "codegen_mlflow_app_src_model-registry_constants.tsx_40": "",
+  "codegen_mlflow_app_src_shared_building_blocks_copybox.tsx_18": "",
+  "codegen_mlflow_app_src_shared_building_blocks_pageheader.tsx_54": "",
+  "codegen_mlflow_app_src_shared_building_blocks_previewbadge.tsx_14": "",
+  "codegen_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_cancel": "",
+  "codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_121": "",
+  "codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_130": "",
+  "codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_141": "",
+  "codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_157": "",
+  "codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_207": "",
+  "codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_timeline_tree_timelinetreefilterbutton_111": "",
+  "codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_timeline_tree_timelinetreefilterbutton_83": "",
+  "codegen_no_dynamic_mlflow_web_js_src_common_hooks_usetagassignmentmodal_115": "",
+  "codegen_no_dynamic_mlflow_web_js_src_common_hooks_usetagassignmentmodal_82": "",
+  "codegen_no_dynamic_mlflow_web_js_src_common_hooks_usetagassignmentmodal_91": "",
+  "codegen_no_dynamic_mlflow_web_js_src_common_hooks_usetagassignmentmodal_99": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_evaluations_evaluationruncompareselector_112": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_evaluations_evaluationruncompareselector_190": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_experiment_page_components_experimentlistviewtagsfilter_69": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_experiment_page_components_experimentlistviewtagsfilter_87": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_experiment_page_components_experimentlistviewtagsfilter_96": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_experiment_page_components_header_experimentviewheaderkindselector_113": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_traces_quickstart_tracetablequickstart.utils_366": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_evaluation_runs_experimentevaluationrunstablecellrenderers_284": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_page_tabs_side_nav_experimentpagesidenavsection_93": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_customcodescorerformrenderer_152": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_customcodescorerformrenderer_209": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_deletescorermodalrenderer_28": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_deletescorermodalrenderer_46": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_178": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_224": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_234": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_263": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_271": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_316": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_52": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_106": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_123": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_179": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_41": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_45": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_85": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scoreremptystaterenderer_59": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorerformrenderer_140": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorerformrenderer_293": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorerformrenderer_298": "",
+  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorermodalrenderer_29": "",
+  "codegen_web-shared_src_copy_copyactionbutton.tsx_17": "",
+  "codegen_web-shared_src_snippet_actions_snippetactionbutton.tsx_26": "",
+  "codegen_web-shared_src_snippet_actions_snippetactionbutton.tsx_33": "",
+  "codegen_webapp_js_genai_util_markdown.tsx_71": "",
+
+  // -- Other --
   "TagAssignmentKey.Default.Input": "",
   "TagAssignmentValue.Default.Input": "",
-  account: "",
+  "account": "",
   "account.change_password_button": "",
   "account.change_password_modal": "",
   "account.change_password_modal.error": "",
@@ -148,609 +499,8 @@ module.exports = {
   "admin.users.select_row.self_tooltip": "",
   "admin.users.username_header": "",
   "admin.users.username_link": "",
-  cancel: "",
+  "cancel": "",
   "categorical-aggregate-chart-more-items": "",
-  "codegen_mlflow_app_src_common_components_darkthemeswitch.tsx_32": "",
-  "codegen_mlflow_app_src_common_components_editablenote.tsx_114": "",
-  "codegen_mlflow_app_src_common_components_editablenote.tsx_124": "",
-  "codegen_mlflow_app_src_common_components_editablenote.tsx_178": "",
-  "codegen_mlflow_app_src_common_components_editabletagstableview.tsx_107": "",
-  "codegen_mlflow_app_src_common_components_editabletagstableview.tsx_117": "",
-  "codegen_mlflow_app_src_common_components_editabletagstableview.tsx_127": "",
-  "codegen_mlflow_app_src_common_components_iconbutton.tsx_20": "",
-  "codegen_mlflow_app_src_common_components_keyvaluetag.tsx_60": "",
-  "codegen_mlflow_app_src_common_components_keyvaluetagfullviewmodal.tsx_17": "",
-  "codegen_mlflow_app_src_common_components_keyvaluetagseditorcell.tsx_29": "",
-  "codegen_mlflow_app_src_common_components_keyvaluetagseditorcell.tsx_37": "",
-  "codegen_mlflow_app_src_common_components_previewsidebar.tsx_67": "",
-  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_120": "",
-  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_131": "",
-  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_145": "",
-  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_151": "",
-  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_228": "",
-  "codegen_mlflow_app_src_common_components_tables_editableformtable.tsx_50": "",
-  "codegen_mlflow_app_src_common_components_trimmedtext.tsx_30": "",
-  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_135": "",
-  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_147": "",
-  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_174": "",
-  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_223": "",
-  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_248": "",
-  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_306": "",
-  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_309": "",
-  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_316": "",
-  "codegen_mlflow_app_src_common_hooks_useeditkeyvaluetagsmodal.tsx_324": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_artifact-view-components_showartifactloggedtableview.tsx_181":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_artifact-view-components_showartifactloggedtableview.tsx_223":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_artifact-view-components_showartifactloggedtableview.tsx_315":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_artifact-view-components_showartifactloggedtableview.tsx_331":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_artifactview.tsx_288": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_artifactview.tsx_337": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_comparerunbox.tsx_46": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_compareruncontour.tsx_282": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_compareruncontour.tsx_299": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_comparerunscatter.tsx_182": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_comparerunview.tsx_570": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_comparerunview.tsx_581": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_comparerunview.tsx_592": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationcellevaluatebutton.tsx_59":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationcreatepromptrunoutput.tsx_144":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationcreatepromptrunoutput.tsx_85":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationcreatepromptrunoutput.tsx_99":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadercellrenderer.tsx_112":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadercellrenderer.tsx_118":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadercellrenderer.tsx_143":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadercellrenderer.tsx_150":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheaderdatasetindicator.tsx_37":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheaderdatasetindicator.tsx_49":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheaderdatasetindicator.tsx_51":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheaderdatasetindicator.tsx_66":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadermodelindicator.tsx_107":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationrunheadermodelindicator.tsx_115":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationtableactionscellrenderer.tsx_37":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_components_evaluationtableactionscolumnrenderer.tsx_22":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_createnotebookrunmodal.tsx_111":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_createnotebookrunmodal.tsx_117":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactcompareview.tsx_358":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactcompareview.tsx_414":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactcompareview.tsx_433":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactcompareview.tsx_465":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationartifactviewemptystate.tsx_48":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptparameters.tsx_107":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptparameters.tsx_28":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptparameters.tsx_39":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_541":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_589":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_596":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_597":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_638":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_678":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_694":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_695":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodal.tsx_736":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodalexamples.tsx_42":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodalexamples.tsx_48":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_evaluationcreatepromptrunmodalexamples.tsx_90":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_hooks_useevaluationaddnewinputsmodal.tsx_57":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_hooks_useevaluationaddnewinputsmodal.tsx_99":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_hooks_useevaluationartifactwriteback.tsx_102":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluation-artifacts-compare_hooks_useevaluationartifactwriteback.tsx_110":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewassessmentssection.tsx_149":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewassessmentupsertform.tsx_124":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewassessmentupsertform.tsx_160":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewretrievalsection.tsx_30":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_components_evaluationsreviewretrievalsection.tsx_32":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_evaluations_evaluationsoverview.tsx_576":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_experimentviewnotes.tsx_57":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_header_experimentgetsharelinkmodal.tsx_101":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_header_experimentgetsharelinkmodal.tsx_115":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_header_experimentviewheadersharebutton.tsx_44":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_172":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_184":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_49":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_56":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_datasetscellrenderer.tsx_75":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_groupparentcellrenderer.tsx_109":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_groupparentcellrenderer.tsx_136":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_loadmorerowrenderer.tsx_20":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_modelscellrenderer.tsx_49":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_rowactionsheadercellrenderer.tsx_52":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_cells_runnamecellrenderer.tsx_46":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetdrawer.tsx_206":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetdrawer.tsx_81":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetlink.tsx_19_1":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetlink.tsx_19_2":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetschema.tsx_92":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetschematable.tsx_57":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetschematable.tsx_58":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetsourceurl.tsx_34":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewdatasetwithcontext.tsx_41":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscolumnselector.tsx_300":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscolumnselector.tsx_315":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrols.tsx_175":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactions.tsx_110":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactions.tsx_117":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactions.tsx_126":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactions.tsx_136":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactionsaddnewtagmodal.tsx_34":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactionsaddnewtagmodal.tsx_51":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactionsaddnewtagmodal.tsx_78":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsactionsselecttags.tsx_162":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_184":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_201":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_211":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_217":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_248":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_289":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_329":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_338":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_362":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_382":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_402":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_403":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_415":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_461":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_469":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunscontrolsfilters.tsx_time_button":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsemptytable.tsx_35":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_168":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_191":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_233":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_244":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_280":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_302":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_306":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_314":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_330":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_342":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_349":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_426":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunsgroupbyselector.tsx_436":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunssortselectorv2.tsx_137":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunssortselectorv2.tsx_151":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunssortselectorv2.tsx_97":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_experimentviewrunstableaddcolumncta.tsx_218":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_runssearchautocomplete.tsx_212":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_runssearchautocomplete.tsx_236":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_experiment-page_components_runs_runssearchautocomplete.tsx_310":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_metricchartsaccordion.tsx_82": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_metricsplotcontrols.tsx_120": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_metricsplotcontrols.tsx_154": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_metricsplotcontrols.tsx_220": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_metricsplotcontrols.tsx_222": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_modals_createexperimentform.tsx_51": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_modals_createexperimentform.tsx_71": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_modals_getlinkmodal.tsx_21": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_modals_renameform.tsx_69": "",
-  "codegen_mlflow_app_src_experiment-tracking_components_parallelcoordinatesplotcontrols.tsx_84":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewdatasetbox.tsx_16":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewdatasetbox.tsx_70":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewdatasetbox.tsx_81":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewdescriptionbox.tsx_46":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewmetricstable.tsx_186":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewmetricstable.tsx_312":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewparamstable.tsx_213":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewparamstable.tsx_244":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewparamstable.tsx_74":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewregisteredmodelsbox.tsx_40":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewsourcebox.tsx_48":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_overview_runviewstatusbox.tsx_81":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_195":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_231":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_50":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_58":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_80":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_89":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewheaderregistermodelbutton.tsx_90":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_run-page_runviewmetricchartsv2.tsx_244":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_262":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_288":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_291":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_298":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_316":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_324":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_334":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_340":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_344":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_chartcard.common.tsx_350":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_runschartsparallelchartcard.tsx_293":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_cards_runschartsparallelchartcard.tsx_300":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_charts_imagegridmultiplekeyplot.tsx_44":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_charts_imagegridmultiplekeyplot.tsx_52":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfiguredifferencechart.tsx_129":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfiguredifferencechart.tsx_138":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfiguredifferencechart.tsx_157":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfiguredifferencechart.tsx_98":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigureimagechart.tsx_84":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_436":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_474":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_494":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_524":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_628":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_682":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_703":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_716":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_747":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_config_runschartsconfigurelinechart.tsx_838":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_112":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_126":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_42":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_56":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_70":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_84":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsaddchartmenu.tsx_98":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsconfiguremodal.tsx_232":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsconfiguremodal.tsx_296":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsfilterinput.tsx_30":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsfullscreenmodal.tsx_53":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_118":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_44":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_68":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_78":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsglobalchartsettingsdropdown.tsx_88":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsnodatafoundindicator.tsx_31":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsyaxismetricandexpressionselector.tsx_122":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_runschartsyaxismetricandexpressionselector.tsx_221":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_220":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_321":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_327":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_333":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_components_sections_runschartssectionheader.tsx_351":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-charts_hooks_userunschartstooltip.stories.tsx_42":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_cards_chartcard.common.tsx_158":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_runscompareaddchartmenu.tsx_19":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_runscomparetooltipbody.tsx_259":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_runscomparetooltipbody.tsx_282":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_runscomparetooltipbody.tsx_302":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_sections_runscomparesectionaccordion.tsx_405":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_sections_runscomparesectionheader.tsx_246":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_sections_runscomparesectionheader.tsx_251":
-    "",
-  "codegen_mlflow_app_src_experiment-tracking_components_runs-compare_sections_runscomparesectionheader.tsx_288":
-    "",
-  "codegen_mlflow_app_src_model-registry_components_CreateModelButton.tsx_28": "",
-  "codegen_mlflow_app_src_model-registry_components_aliases_modelstablealiasedversionscell.tsx_47":
-    "",
-  "codegen_mlflow_app_src_model-registry_components_aliases_modelstablealiasedversionscell.tsx_57":
-    "",
-  "codegen_mlflow_app_src_model-registry_components_aliases_modelversionaliastag.tsx_23": "",
-  "codegen_mlflow_app_src_model-registry_components_aliases_modelversiontablealiasescell.tsx_30":
-    "",
-  "codegen_mlflow_app_src_model-registry_components_aliases_modelversiontablealiasescell.tsx_41":
-    "",
-  "codegen_mlflow_app_src_model-registry_components_aliases_modelversionviewaliaseditor.tsx_29": "",
-  "codegen_mlflow_app_src_model-registry_components_aliases_modelversionviewaliaseditor.tsx_37": "",
-  "codegen_mlflow_app_src_model-registry_components_createmodelform.tsx_62": "",
-  "codegen_mlflow_app_src_model-registry_components_model-list_modellistfilters.tsx_118": "",
-  "codegen_mlflow_app_src_model-registry_components_model-list_modellistfilters.tsx_152": "",
-  "codegen_mlflow_app_src_model-registry_components_model-list_modellistfilters.tsx_46": "",
-  "codegen_mlflow_app_src_model-registry_components_model-list_modellistfilters.tsx_61": "",
-  "codegen_mlflow_app_src_model-registry_components_model-list_modellisttable.tsx_412": "",
-  "codegen_mlflow_app_src_model-registry_components_model-list_modellisttable.tsx_learn_more": "",
-  "codegen_mlflow_app_src_model-registry_components_model-list_modeltablecellrenderers.tsx_65": "",
-  "codegen_mlflow_app_src_model-registry_components_modellistview.tsx_305": "",
-  "codegen_mlflow_app_src_model-registry_components_modelsnextuipromomodal.tsx_15": "",
-  "codegen_mlflow_app_src_model-registry_components_modelsnextuipromomodal.tsx_26": "",
-  "codegen_mlflow_app_src_model-registry_components_modelsnextuipromomodal.tsx_32": "",
-  "codegen_mlflow_app_src_model-registry_components_modelsnextuitoggleswitch.tsx_39": "",
-  "codegen_mlflow_app_src_model-registry_components_modelsnextuitoggleswitch.tsx_50": "",
-  "codegen_mlflow_app_src_model-registry_components_modelsnextuitoggleswitch.tsx_74": "",
-  "codegen_mlflow_app_src_model-registry_components_modelversiontable.tsx_425": "",
-  "codegen_mlflow_app_src_model-registry_components_modelversiontable.tsx_450": "",
-  "codegen_mlflow_app_src_model-registry_components_modelversiontable.tsx_458": "",
-  "codegen_mlflow_app_src_model-registry_components_modelversiontable.tsx_477": "",
-  "codegen_mlflow_app_src_model-registry_components_modelversionview.tsx_301": "",
-  "codegen_mlflow_app_src_model-registry_components_modelversionview.tsx_516": "",
-  "codegen_mlflow_app_src_model-registry_components_modelversionview_tsx_394": "",
-  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_467": "",
-  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_600": "",
-  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_619": "",
-  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_646": "",
-  "codegen_mlflow_app_src_model-registry_components_modelview.tsx_662": "",
-  "codegen_mlflow_app_src_model-registry_components_promotemodelbutton.tsx_140": "",
-  "codegen_mlflow_app_src_model-registry_components_promotemodelbutton.tsx_165": "",
-  "codegen_mlflow_app_src_model-registry_components_registermodel.tsx_242": "",
-  "codegen_mlflow_app_src_model-registry_components_registermodel.tsx_248": "",
-  "codegen_mlflow_app_src_model-registry_components_registermodel.tsx_261": "",
-  "codegen_mlflow_app_src_model-registry_components_registermodelform.tsx_132": "",
-  "codegen_mlflow_app_src_model-registry_constants.tsx_37": "",
-  "codegen_mlflow_app_src_model-registry_constants.tsx_38": "",
-  "codegen_mlflow_app_src_model-registry_constants.tsx_39": "",
-  "codegen_mlflow_app_src_model-registry_constants.tsx_40": "",
-  "codegen_mlflow_app_src_shared_building_blocks_copybox.tsx_18": "",
-  "codegen_mlflow_app_src_shared_building_blocks_pageheader.tsx_54": "",
-  "codegen_mlflow_app_src_shared_building_blocks_previewbadge.tsx_14": "",
-  codegen_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_cancel:
-    "",
-  codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_121:
-    "",
-  codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_130:
-    "",
-  codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_141:
-    "",
-  codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_157:
-    "",
-  codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_hooks_useunifiedtracetagsmodal_207:
-    "",
-  codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_timeline_tree_timelinetreefilterbutton_111:
-    "",
-  codegen_no_dynamic_js_packages_web_shared_src_model_trace_explorer_timeline_tree_timelinetreefilterbutton_83:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_common_hooks_usetagassignmentmodal_115: "",
-  codegen_no_dynamic_mlflow_web_js_src_common_hooks_usetagassignmentmodal_82: "",
-  codegen_no_dynamic_mlflow_web_js_src_common_hooks_usetagassignmentmodal_91: "",
-  codegen_no_dynamic_mlflow_web_js_src_common_hooks_usetagassignmentmodal_99: "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_evaluations_evaluationruncompareselector_112:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_evaluations_evaluationruncompareselector_190:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_experiment_page_components_experimentlistviewtagsfilter_69:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_experiment_page_components_experimentlistviewtagsfilter_87:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_experiment_page_components_experimentlistviewtagsfilter_96:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_experiment_page_components_header_experimentviewheaderkindselector_113:
-    "",
-  "codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_components_traces_quickstart_tracetablequickstart.utils_366":
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_evaluation_runs_experimentevaluationrunstablecellrenderers_284:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_page_tabs_side_nav_experimentpagesidenavsection_93:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_customcodescorerformrenderer_152:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_customcodescorerformrenderer_209:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_deletescorermodalrenderer_28:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_deletescorermodalrenderer_46:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_178:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_224:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_234:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_263:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_271:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_316:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_samplescoreroutputpanelrenderer_52:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_106:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_123:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_179:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_41:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_45:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorercardrenderer_85:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scoreremptystaterenderer_59:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorerformrenderer_140:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorerformrenderer_293:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorerformrenderer_298:
-    "",
-  codegen_no_dynamic_mlflow_web_js_src_experiment_tracking_pages_experiment_scorers_scorermodalrenderer_29:
-    "",
-  "codegen_web-shared_src_copy_copyactionbutton.tsx_17": "",
-  "codegen_web-shared_src_snippet_actions_snippetactionbutton.tsx_26": "",
-  "codegen_web-shared_src_snippet_actions_snippetactionbutton.tsx_33": "",
-  "codegen_webapp_js_genai_util_markdown.tsx_71": "",
   "databricks-experiment-tracking-prompt-edit-tags-button": "",
   "delete-run-modal": "",
   "delete-selected": "",
@@ -766,7 +516,7 @@ module.exports = {
   "eval-tab.delete_traces-modal": "",
   "experiment-evaluation-monitoring-end-date-picker": "",
   "experiment-evaluation-monitoring-start-date-picker": "",
-  fullscreen_button_chartcard: "",
+  "fullscreen_button_chartcard": "",
   "genai.util.markdown-copy-code-block": "",
   "graph-view-span-navigator-next": "",
   "graph-view-span-navigator-prev": "",
@@ -778,13 +528,126 @@ module.exports = {
   "graph-view-toolbar.zoom-in-button": "",
   "graph-view-toolbar.zoom-out": "",
   "graph-view-toolbar.zoom-out-button": "",
+  "mlflow_header.toggle_sidebar_button": "",
+  "open-modal": "",
+  "page-composer.accordion": "",
+  "page-composer.alert": "",
+  "page-composer.back": "",
+  "page-composer.banner": "",
+  "page-composer.button": "",
+  "page-composer.card": "",
+  "page-composer.checkbox": "",
+  "page-composer.combobox": "",
+  "page-composer.confirm-template": "",
+  "page-composer.dark-mode-toggle": "",
+  "page-composer.dark-mode-tooltip": "",
+  "page-composer.delete-journey-modal": "",
+  "page-composer.dropdown-trigger": "",
+  "page-composer.empty-cta": "",
+  "page-composer.export-journey": "",
+  "page-composer.import": "",
+  "page-composer.import-journey-name": "",
+  "page-composer.import-modal": "",
+  "page-composer.import-target": "",
+  "page-composer.input": "",
+  "page-composer.journey": "",
+  "page-composer.journey-dark-toggle": "",
+  "page-composer.journey-dark-tooltip": "",
+  "page-composer.journey-delete-from-list": "",
+  "page-composer.journey-exit": "",
+  "page-composer.journey-export": "",
+  "page-composer.journey-new-from-list": "",
+  "page-composer.journey-next": "",
+  "page-composer.journey-prev": "",
+  "page-composer.journey-rename-from-list": "",
+  "page-composer.journey-selector": "",
+  "page-composer.journey-share": "",
+  "page-composer.journey-viewport": "",
+  "page-composer.journey-vp-1280": "",
+  "page-composer.journey-vp-1440": "",
+  "page-composer.journey-vp-768": "",
+  "page-composer.journey-vp-full": "",
+  "page-composer.json-preview": "",
+  "page-composer.json-preview-copy": "",
+  "page-composer.json-preview-modal": "",
+  "page-composer.json-preview-mode": "",
+  "page-composer.json-preview-mode-agent": "",
+  "page-composer.json-preview-mode-page": "",
+  "page-composer.link": "",
+  "page-composer.modal-cancel": "",
+  "page-composer.modal-ok": "",
+  "page-composer.new-journey-modal": "",
+  "page-composer.notification": "",
+  "page-composer.overflow": "",
+  "page-composer.pagination": "",
+  "page-composer.play-journey-from-list": "",
+  "page-composer.popover": "",
+  "page-composer.popover-trigger": "",
+  "page-composer.preview": "",
+  "page-composer.preview-card": "",
+  "page-composer.preview-copy-agent": "",
+  "page-composer.preview-copy-json": "",
+  "page-composer.preview-dark-toggle": "",
+  "page-composer.preview-dark-tooltip": "",
+  "page-composer.preview-export-agent": "",
+  "page-composer.preview-export-json": "",
+  "page-composer.preview-export-menu": "",
+  "page-composer.preview-export-png": "",
+  "page-composer.preview-share": "",
+  "page-composer.radio-group": "",
+  "page-composer.rename-journey-modal": "",
+  "page-composer.save-snapshot": "",
+  "page-composer.segmented": "",
+  "page-composer.select": "",
+  "page-composer.snapshot-modal": "",
+  "page-composer.snapshot-name": "",
+  "page-composer.snapshot-replace-select": "",
+  "page-composer.snapshot-save-mode": "",
+  "page-composer.snapshots-list": "",
+  "page-composer.snapshots-list-modal": "",
+  "page-composer.switch": "",
+  "page-composer.table-skeleton": "",
+  "page-composer.tabs": "",
+  "page-composer.tag": "",
+  "page-composer.templates": "",
+  "page-composer.textarea": "",
+  "page-composer.toggle": "",
+  "page-composer.tooltip": "",
+  "page-composer.upload-file": "",
+  "page-composer.viewport-desktop": "",
+  "page-composer.viewport-full": "",
+  "page-composer.viewport-laptop": "",
+  "page-composer.viewport-selector": "",
+  "page-composer.viewport-tablet": "",
+  "promptType": "",
+  "shared-journey.next": "",
+  "shared-journey.prev": "",
+  "shared-preview.copy-json": "",
+  "shared-preview.open-editor": "",
+  "storybook.long-form.description": "",
+  "storybook.long-form.model": "",
+  "storybook.long-form.name": "",
+  "storybook.long-form.provider": "",
+  "traces-v3-empty-state-button": "",
+  "virtualized-table-header": "",
+  "web-shared.genai-traces-table.evaluations-review-assessment.tooltip": "",
+  "web-shared.genai-traces-table.key-value-tag.full-view-tooltip": "",
+  "web-shared.time-ago": "",
+  "workspace_selector": "",
+  "workspace_selector.tooltip": "",
+
+  // -- mlflow.artifact_view --
   "mlflow.artifact_view.download_artifact": "",
   "mlflow.artifact_view.markdown_render_mode": "",
   "mlflow.artifact_view.markdown_rendered_tooltip": "",
   "mlflow.artifact_view.markdown_source_tooltip": "",
+
+  // -- mlflow.artifacts --
   "mlflow.artifacts.logged_model_fallback_info": "",
   "mlflow.artifacts.model_version.link": "",
   "mlflow.artifacts.model_version.status": "",
+
+  // -- mlflow.assistant --
   "mlflow.assistant.chat_panel.beta": "",
   "mlflow.assistant.chat_panel.close": "",
   "mlflow.assistant.chat_panel.close.tooltip": "",
@@ -797,6 +660,7 @@ module.exports = {
   "mlflow.assistant.chat_panel.context.trace": "",
   "mlflow.assistant.chat_panel.copy": "",
   "mlflow.assistant.chat_panel.copy.tooltip": "",
+  "mlflow.assistant.chat_panel.provider_info.tooltip": "",
   "mlflow.assistant.chat_panel.regenerate": "",
   "mlflow.assistant.chat_panel.regenerate.tooltip": "",
   "mlflow.assistant.chat_panel.remote_close": "",
@@ -807,8 +671,12 @@ module.exports = {
   "mlflow.assistant.chat_panel.settings.tooltip": "",
   "mlflow.assistant.chat_panel.setup": "",
   "mlflow.assistant.chat_panel.suggestion.card": "",
+  "mlflow.assistant.chat_panel.usage_info": "",
+  "mlflow.assistant.fab": "",
   "mlflow.assistant.icon_button": "",
   "mlflow.assistant.icon_button.tooltip": "",
+  "mlflow.assistant.permission.allow": "",
+  "mlflow.assistant.permission.deny": "",
   "mlflow.assistant.setup.codex.api_keys": "",
   "mlflow.assistant.setup.codex.back": "",
   "mlflow.assistant.setup.codex.check_again": "",
@@ -848,6 +716,9 @@ module.exports = {
   "mlflow.assistant.setup.provider.continue": "",
   "mlflow.assistant.setup.provider.model": "",
   "mlflow.assistant.setup.provider.url": "",
+  "mlflow.assistant.trace_header_button": "",
+
+  // -- mlflow.charts --
   "mlflow.charts.bar_card_title.dataset_tag": "",
   "mlflow.charts.chart_configure.metric_with_dataset_select": "",
   "mlflow.charts.chart_configure.metric_with_dataset_select.tag": "",
@@ -885,6 +756,8 @@ module.exports = {
   "mlflow.charts.trace_requests.zoom_out": "",
   "mlflow.charts.trace_token_stats": "",
   "mlflow.charts.trace_token_usage": "",
+
+  // -- mlflow.chat-sessions --
   "mlflow.chat-sessions.actions-dropdown": "",
   "mlflow.chat-sessions.actions-dropdown-tooltip": "",
   "mlflow.chat-sessions.copy-session-id": "",
@@ -895,8 +768,12 @@ module.exports = {
   "mlflow.chat-sessions.table-header": "",
   "mlflow.chat-sessions.table-header-checkbox": "",
   "mlflow.chat-sessions.table-row-checkbox": "",
+
+  // -- mlflow.chat_sessions --
   "mlflow.chat_sessions.empty_state.example_code_copy": "",
   "mlflow.chat_sessions.empty_state.learn_more_link": "",
+
+  // -- mlflow.common --
   "mlflow.common.components.editable-note.tooltip-icon": "",
   "mlflow.common.components.key-value-tag.tooltip": "",
   "mlflow.common.components.tag-select-dropdown.add-new-tag-tooltip": "",
@@ -904,28 +781,75 @@ module.exports = {
   "mlflow.common.expandable_cell": "",
   "mlflow.common.hooks.useeditkeyvaluetagsmodal.add-tag-tooltip": "",
   "mlflow.common.hooks.useeditkeyvaluetagsmodal.tooltip": "",
+
+  // -- mlflow.compare-model-versions --
   "mlflow.compare-model-versions.plots-tabs": "",
+
+  // -- mlflow.compare-runs --
   "mlflow.compare-runs.visualizations-tabs": "",
+
+  // -- mlflow.compare_runs --
   "mlflow.compare_runs.data_cell": "",
   "mlflow.compare_runs.metric_table.cell": "",
+
+  // -- mlflow.create-evaluation-dataset-modal --
   "mlflow.create-evaluation-dataset-modal": "",
   "mlflow.create-evaluation-dataset-modal.dataset-name": "",
+
+  // -- mlflow.create-notebook-run-modal --
   "mlflow.create-notebook-run-modal.tabs": "",
+
+  // -- mlflow.dataset_drawer --
   "mlflow.dataset_drawer.dataset_name_tooltip": "",
+
+  // -- mlflow.detect_issues --
   "mlflow.detect_issues.guidance": "",
   "mlflow.detect_issues.guidance.dismiss": "",
   "mlflow.detect_issues.guidance.got_it": "",
+
+  // -- mlflow.edit-aliases-modal --
   "mlflow.edit-aliases-modal": "",
   "mlflow.edit-aliases-modal.cancel-button": "",
   "mlflow.edit-aliases-modal.conflicted-alias-alert": "",
   "mlflow.edit-aliases-modal.error-alert": "",
   "mlflow.edit-aliases-modal.exceeding-limit-alert": "",
-  "mlflow.edit-aliases-modal.reserved-alias-alert": "",
   "mlflow.edit-aliases-modal.save-button": "",
+
+  // -- mlflow.endpoint-selector --
   "mlflow.endpoint-selector.deleted-endpoint-tooltip": "",
   "mlflow.endpoint-selector.endpoints-error": "",
   "mlflow.endpoint-selector.select": "",
+
+  // -- mlflow.eval-dataset-records --
   "mlflow.eval-dataset-records.column-header": "",
+
+  // -- mlflow.eval-datasets --
+  "mlflow.eval-datasets.column-header": "",
+  "mlflow.eval-datasets.create-dataset-button": "",
+  "mlflow.eval-datasets.dataset-actions-menu": "",
+  "mlflow.eval-datasets.dataset-id": "",
+  "mlflow.eval-datasets.dataset-id-tooltip": "",
+  "mlflow.eval-datasets.dataset-name-cell": "",
+  "mlflow.eval-datasets.delete-dataset-menu-option": "",
+  "mlflow.eval-datasets.key-value-tag-modal": "",
+  "mlflow.eval-datasets.key-value-tag-modal-close": "",
+  "mlflow.eval-datasets.key-value-tag-modal-delete": "",
+  "mlflow.eval-datasets.key-value-tag-modal-save": "",
+  "mlflow.eval-datasets.last-updated-cell-tooltip": "",
+  "mlflow.eval-datasets.learn-more-link": "",
+  "mlflow.eval-datasets.records-toolbar.column-checkbox": "",
+  "mlflow.eval-datasets.records-toolbar.columns-toggle": "",
+  "mlflow.eval-datasets.records-toolbar.row-size-radio": "",
+  "mlflow.eval-datasets.records-toolbar.row-size-toggle": "",
+  "mlflow.eval-datasets.records-toolbar.search-input": "",
+  "mlflow.eval-datasets.search-input": "",
+  "mlflow.eval-datasets.table-column-selector-button": "",
+  "mlflow.eval-datasets.table-column-selector-checkbox": "",
+  "mlflow.eval-datasets.table-refresh-button": "",
+  "mlflow.eval-datasets.tag-key-input": "",
+  "mlflow.eval-datasets.tag-value-input": "",
+
+  // -- mlflow.eval-datasets-v2 --
   "mlflow.eval-datasets-v2.breadcrumb.datasets": "",
   "mlflow.eval-datasets-v2.create-dataset.button": "",
   "mlflow.eval-datasets-v2.detail.actions": "",
@@ -1010,30 +934,8 @@ module.exports = {
   "mlflow.eval-datasets-v2.side-panel.discard-prompt": "",
   "mlflow.eval-datasets-v2.side-panel.source-trace-link": "",
   "mlflow.eval-datasets-v2.trace-modal": "",
-  "mlflow.eval-datasets.column-header": "",
-  "mlflow.eval-datasets.create-dataset-button": "",
-  "mlflow.eval-datasets.dataset-actions-menu": "",
-  "mlflow.eval-datasets.dataset-id": "",
-  "mlflow.eval-datasets.dataset-id-tooltip": "",
-  "mlflow.eval-datasets.dataset-name-cell": "",
-  "mlflow.eval-datasets.delete-dataset-menu-option": "",
-  "mlflow.eval-datasets.key-value-tag-modal": "",
-  "mlflow.eval-datasets.key-value-tag-modal-close": "",
-  "mlflow.eval-datasets.key-value-tag-modal-delete": "",
-  "mlflow.eval-datasets.key-value-tag-modal-save": "",
-  "mlflow.eval-datasets.last-updated-cell-tooltip": "",
-  "mlflow.eval-datasets.learn-more-link": "",
-  "mlflow.eval-datasets.records-toolbar.column-checkbox": "",
-  "mlflow.eval-datasets.records-toolbar.columns-toggle": "",
-  "mlflow.eval-datasets.records-toolbar.row-size-radio": "",
-  "mlflow.eval-datasets.records-toolbar.row-size-toggle": "",
-  "mlflow.eval-datasets.records-toolbar.search-input": "",
-  "mlflow.eval-datasets.search-input": "",
-  "mlflow.eval-datasets.table-column-selector-button": "",
-  "mlflow.eval-datasets.table-column-selector-checkbox": "",
-  "mlflow.eval-datasets.table-refresh-button": "",
-  "mlflow.eval-datasets.tag-key-input": "",
-  "mlflow.eval-datasets.tag-value-input": "",
+
+  // -- mlflow.eval-runs --
   "mlflow.eval-runs.actions-button": "",
   "mlflow.eval-runs.actions.compare": "",
   "mlflow.eval-runs.actions.delete": "",
@@ -1072,8 +974,14 @@ module.exports = {
   "mlflow.eval-runs.type-cell.issue-detection": "",
   "mlflow.eval-runs.type-cell.test": "",
   "mlflow.eval-runs.visibility-mode-selector": "",
+
+  // -- mlflow.evaluations_overview --
   "mlflow.evaluations_overview.column_selector_dropdown": "",
+
+  // -- mlflow.evaluations_overview_grouped --
   "mlflow.evaluations_overview_grouped.column_selector_dropdown": "",
+
+  // -- mlflow.evaluations_review --
   "mlflow.evaluations_review.cancel_edited_assessment_button": "",
   "mlflow.evaluations_review.cancel_override_assessments_button": "",
   "mlflow.evaluations_review.column_count": "",
@@ -1114,6 +1022,36 @@ module.exports = {
   "mlflow.evaluations_review.table_ui.filter_value_numeric": "",
   "mlflow.evaluations_review.textbox.copy": "",
   "mlflow.evaluations_review.trace_data_drawer": "",
+
+  // -- mlflow.experiment --
+  "mlflow.experiment.chat-session.metrics.goal-tag": "",
+  "mlflow.experiment.chat-session.metrics.goal-tooltip": "",
+  "mlflow.experiment.chat-session.metrics.latency-tag": "",
+  "mlflow.experiment.chat-session.metrics.persona-tag": "",
+  "mlflow.experiment.chat-session.metrics.persona-tooltip": "",
+  "mlflow.experiment.chat-session.metrics.tokens-tag": "",
+  "mlflow.experiment.chat-session.view-trace": "",
+  "mlflow.experiment.edit.name": "",
+  "mlflow.experiment.edit.trace-archival-retention": "",
+  "mlflow.experiment.evaluations.ai-judge-tag": "",
+  "mlflow.experiment.evaluations.human-judge-tag": "",
+  "mlflow.experiment.list.tag.add": "",
+  "mlflow.experiment.metadata_editor.collapse_button": "",
+  "mlflow.experiment.metadata_editor.edit_button": "",
+  "mlflow.experiment.metadata_editor.error": "",
+  "mlflow.experiment.metadata_editor.expand_button": "",
+  "mlflow.experiment.metadata_editor.modal": "",
+  "mlflow.experiment.overview": "",
+  "mlflow.experiment.overview.detect-issues-button": "",
+  "mlflow.experiment.overview.filestore-warning": "",
+  "mlflow.experiment.overview.tabs": "",
+  "mlflow.experiment.overview.time-unit-selector": "",
+  "mlflow.experiment.prompt.optimize-modal": "",
+  "mlflow.experiment.prompt.optimize-modal.mlflow-link": "",
+  "mlflow.experiment.trace_location_path.button": "",
+  "mlflow.experiment.trace_location_path.tooltip": "",
+
+  // -- mlflow.experiment-evaluation-monitoring --
   "mlflow.experiment-evaluation-monitoring.date-selector": "",
   "mlflow.experiment-evaluation-monitoring.date-selector-button": "",
   "mlflow.experiment-evaluation-monitoring.evals-logs-table-cell": "",
@@ -1122,14 +1060,21 @@ module.exports = {
   "mlflow.experiment-evaluation-monitoring.evals-logs-table-header-select-cell": "",
   "mlflow.experiment-evaluation-monitoring.trace-info-hover-other-request-time": "",
   "mlflow.experiment-evaluation-monitoring.trace-info-hover-request-time": "",
+
+  // -- mlflow.experiment-label-schemas --
   "mlflow.experiment-label-schemas.preview": "",
   "mlflow.experiment-label-schemas.preview.comment": "",
+
+  // -- mlflow.experiment-page --
   "mlflow.experiment-page.header.back-icon-button": "",
   "mlflow.experiment-page.header.docs-link": "",
   "mlflow.experiment-page.header.docs-link-button": "",
-  "mlflow.experiment-page.side-nav": "",
+
+  // -- mlflow.experiment-review-queue --
   "mlflow.experiment-review-queue.delete-queue-confirm": "",
   "mlflow.experiment-review-queue.empty-state-new-queue": "",
+
+  // -- mlflow.experiment-scorers --
   "mlflow.experiment-scorers.add-variable-button": "",
   "mlflow.experiment-scorers.add-variable-conversation": "",
   "mlflow.experiment-scorers.add-variable-expectations": "",
@@ -1165,6 +1110,7 @@ module.exports = {
   "mlflow.experiment-scorers.new-scorer-button": "",
   "mlflow.experiment-scorers.output-type-select": "",
   "mlflow.experiment-scorers.scorer-status-tag": "",
+  "mlflow.experiment-scorers.switch-to-endpoint-link": "",
   "mlflow.experiment-scorers.switch-to-manual-link": "",
   "mlflow.experiment-scorers.traces-view-create-judge": "",
   "mlflow.experiment-scorers.traces-view-judge-error": "",
@@ -1173,6 +1119,8 @@ module.exports = {
   "mlflow.experiment-scorers.traces-view-judge-select-modal": "",
   "mlflow.experiment-scorers.traces-view-judge-template": "",
   "mlflow.experiment-scorers.traces-view-judge-type-filter": "",
+
+  // -- mlflow.experiment-side-nav --
   "mlflow.experiment-side-nav.classic-ml.models": "",
   "mlflow.experiment-side-nav.classic-ml.runs": "",
   "mlflow.experiment-side-nav.classic-ml.traces": "",
@@ -1187,7 +1135,11 @@ module.exports = {
   "mlflow.experiment-side-nav.genai.sessions": "",
   "mlflow.experiment-side-nav.genai.traces": "",
   "mlflow.experiment-side-nav.genai.training-runs": "",
+
+  // -- mlflow.experiment-sidebar --
   "mlflow.experiment-sidebar.back-button": "",
+
+  // -- mlflow.experiment-tracking --
   "mlflow.experiment-tracking.evaluation-artifact-compare.run-header": "",
   "mlflow.experiment-tracking.evaluation-cell.evaluate-all": "",
   "mlflow.experiment-tracking.evaluation-cell.not-evaluable": "",
@@ -1207,35 +1159,15 @@ module.exports = {
   "mlflow.experiment-tracking.runs-filters.clear-1": "",
   "mlflow.experiment-tracking.runs-filters.toggle-sidepane": "",
   "mlflow.experiment-tracking.runs-group-selector.aggregation": "",
-  "mlflow.experiment.chat-session.metrics.goal-tag": "",
-  "mlflow.experiment.chat-session.metrics.goal-tooltip": "",
-  "mlflow.experiment.chat-session.metrics.latency-tag": "",
-  "mlflow.experiment.chat-session.metrics.persona-tag": "",
-  "mlflow.experiment.chat-session.metrics.persona-tooltip": "",
-  "mlflow.experiment.chat-session.metrics.tokens-tag": "",
-  "mlflow.experiment.chat-session.view-trace": "",
-  "mlflow.experiment.edit.name": "",
-  "mlflow.experiment.edit.trace-archival-retention": "",
-  "mlflow.experiment.evaluations.ai-judge-tag": "",
-  "mlflow.experiment.evaluations.human-judge-tag": "",
-  "mlflow.experiment.list.tag.add": "",
-  "mlflow.experiment.metadata_editor.collapse_button": "",
-  "mlflow.experiment.metadata_editor.edit_button": "",
-  "mlflow.experiment.metadata_editor.error": "",
-  "mlflow.experiment.metadata_editor.expand_button": "",
-  "mlflow.experiment.metadata_editor.modal": "",
-  "mlflow.experiment.overview": "",
-  "mlflow.experiment.overview.detect-issues-button": "",
-  "mlflow.experiment.overview.filestore-warning": "",
-  "mlflow.experiment.overview.tabs": "",
-  "mlflow.experiment.overview.time-unit-selector": "",
-  "mlflow.experiment.prompt.optimize-modal": "",
-  "mlflow.experiment.prompt.optimize-modal.mlflow-link": "",
-  "mlflow.experiment.trace_location_path.button": "",
-  "mlflow.experiment.trace_location_path.tooltip": "",
+
+  // -- mlflow.experiment_list --
   "mlflow.experiment_list.demo_badge": "",
   "mlflow.experiment_list.demo_tooltip": "",
+
+  // -- mlflow.experiment_list_table --
   "mlflow.experiment_list_table.create_experiment": "",
+
+  // -- mlflow.experiment_list_view --
   "mlflow.experiment_list_view.bulk_delete_button": "",
   "mlflow.experiment_list_view.check_all_box": "",
   "mlflow.experiment_list_view.check_box": "",
@@ -1252,15 +1184,29 @@ module.exports = {
   "mlflow.experiment_list_view.tag_filter.apply_filters_button": "",
   "mlflow.experiment_list_view.tag_filter.clear_filters_button": "",
   "mlflow.experiment_list_view.tag_filter.trigger": "",
+
+  // -- mlflow.experiment_page --
   "mlflow.experiment_page.grouped_runs.open_runs_in_new_tab": "",
   "mlflow.experiment_page.mode.artifact": "",
   "mlflow.experiment_page.runs.add_new_tag": "",
   "mlflow.experiment_page.runs.add_tags": "",
+  "mlflow.experiment_page.runs_table.column_selector": "",
+  "mlflow.experiment_page.runs_table.column_selector.reset_to_defaults": "",
+  "mlflow.experiment_page.save_and_share_view.link": "",
+  "mlflow.experiment_page.save_and_share_view.modal": "",
+  "mlflow.experiment_page.save_and_share_view.name_input": "",
+  "mlflow.experiment_page.save_and_share_view.save_button": "",
+  "mlflow.experiment_page.saved_views": "",
+  "mlflow.experiment_page.saved_views.delete_confirm": "",
+  "mlflow.experiment_page.saved_views.trigger": "",
   "mlflow.experiment_page.scorers.advanced_settings_toggle": "",
   "mlflow.experiment_page.scorers.auto_evaluate_toggle": "",
   "mlflow.experiment_page.scorers.filter_string_input": "",
   "mlflow.experiment_page.scorers.filter_string_syntax_link": "",
   "mlflow.experiment_page.scorers.search_traces_syntax_link": "",
+  "mlflow.experiment_page.share_current_view": "",
+  "mlflow.experiment_page.shared_view": "",
+  "mlflow.experiment_page.shared_view.override_undo": "",
   "mlflow.experiment_page.sort_dropdown.search": "",
   "mlflow.experiment_page.sort_dropdown.sort_asc": "",
   "mlflow.experiment_page.sort_dropdown.sort_desc": "",
@@ -1269,9 +1215,13 @@ module.exports = {
   "mlflow.experiment_page.sort_select_v2.sort_desc": "",
   "mlflow.experiment_page.sort_select_v2.toggle": "",
   "mlflow.experiment_page.table_resizer.collapse": "",
+
+  // -- mlflow.experiment_side_nav --
   "mlflow.experiment_side_nav.assistant_beta_tag": "",
   "mlflow.experiment_side_nav.assistant_button": "",
   "mlflow.experiment_side_nav.assistant_tooltip": "",
+
+  // -- mlflow.experiment_tracking --
   "mlflow.experiment_tracking.artifacts.logged_model_fallback_link": "",
   "mlflow.experiment_tracking.artifacts.model_version_link": "",
   "mlflow.experiment_tracking.charts.tooltip_run_link": "",
@@ -1310,6 +1260,8 @@ module.exports = {
   "mlflow.experiment_tracking.runs_table.model_version_link": "",
   "mlflow.experiment_tracking.runs_table.run_name_link": "",
   "mlflow.experiment_tracking.side_nav.section_item_link": "",
+
+  // -- mlflow.experiment_view --
   "mlflow.experiment_view.header.experiment-name-tooltip": "",
   "mlflow.experiment_view.header.experiment_kind_inference_modal": "",
   "mlflow.experiment_view.header.experiment_kind_inference_popover": "",
@@ -1319,11 +1271,17 @@ module.exports = {
   "mlflow.experiment_view.header.experiment_kind_selector.tooltip": "",
   "mlflow.experiment_view.header.trace_archival_badge": "",
   "mlflow.experiment_view.header.trace_archival_badge_tooltip": "",
+
+  // -- mlflow.experiment_view_runs_table --
   "mlflow.experiment_view_runs_table.column_header.models.tooltip": "",
+
+  // -- mlflow.export-traces-to-dataset-modal --
   "mlflow.export-traces-to-dataset-modal": "",
   "mlflow.export-traces-to-dataset-modal.header-checkbox": "",
   "mlflow.export-traces-to-dataset-modal.multiturn-error": "",
   "mlflow.export-traces-to-dataset-modal.row-checkbox": "",
+
+  // -- mlflow.gateway --
   "mlflow.gateway.api-key-details.drawer": "",
   "mlflow.gateway.api-key-details.drawer.cancel-button": "",
   "mlflow.gateway.api-key-details.drawer.edit": "",
@@ -1559,6 +1517,8 @@ module.exports = {
   "mlflow.gateway.usage.go_to_endpoints_link_logs": "",
   "mlflow.gateway.usage.tabs": "",
   "mlflow.gateway.usage.user-selector": "",
+
+  // -- mlflow.genai-traces-table --
   "mlflow.genai-traces-table.actions-disabled-tooltip": "",
   "mlflow.genai-traces-table.actions-dropdown": "",
   "mlflow.genai-traces-table.add-to-review-queue": "",
@@ -1594,18 +1554,26 @@ module.exports = {
   "mlflow.genai-traces-table.tag_view_modal.tag_value_copy_button": "",
   "mlflow.genai-traces-table.tokens": "",
   "mlflow.genai-traces-table.trace-id": "",
+
+  // -- mlflow.genai_traces_table --
   "mlflow.genai_traces_table.filter_dropdown": "",
   "mlflow.genai_traces_table.sort_dropdown.no_results": "",
   "mlflow.genai_traces_table.sort_dropdown.search": "",
   "mlflow.genai_traces_table.sort_dropdown.sort_desc": "",
   "mlflow.genai_traces_table.sort_dropdown.sort_option": "",
+
+  // -- mlflow.genai_traces_table_filter --
   "mlflow.genai_traces_table_filter.filter_dropdown": "",
+
+  // -- mlflow.generic_input_modal --
+  "mlflow.generic_input_modal.submission_error": "",
+
+  // -- mlflow.home --
   "mlflow.home.create_workspace_modal": "",
   "mlflow.home.create_workspace_modal.error": "",
   "mlflow.home.create_workspace_modal.workspace_name_input": "",
   "mlflow.home.create_workspace_modal.workspace_settings": "",
   "mlflow.home.demo-banner.launch": "",
-  "mlflow.home.experiments-section": "",
   "mlflow.home.experiments.create": "",
   "mlflow.home.experiments.error": "",
   "mlflow.home.experiments.retry": "",
@@ -1647,9 +1615,13 @@ module.exports = {
   "mlflow.home.workspaces_table.header.description": "",
   "mlflow.home.workspaces_table.header.manage": "",
   "mlflow.home.workspaces_table.header.name": "",
+
+  // -- mlflow.issue-detection --
   "mlflow.issue-detection.category-tag": "",
   "mlflow.issue-detection.completed": "",
   "mlflow.issue-detection.endpoint-link": "",
+
+  // -- mlflow.issues --
   "mlflow.issues.cancel-button": "",
   "mlflow.issues.category-tag": "",
   "mlflow.issues.description-textarea": "",
@@ -1663,9 +1635,13 @@ module.exports = {
   "mlflow.issues.severity-tag": "",
   "mlflow.issues.status-filter": "",
   "mlflow.issues.status-tag": "",
+
+  // -- mlflow.legacy_compare_run --
   "mlflow.legacy_compare_run.run_id": "",
   "mlflow.legacy_compare_run.run_name": "",
   "mlflow.legacy_compare_run.time_row": "",
+
+  // -- mlflow.logged_model --
   "mlflow.logged_model.dataset": "",
   "mlflow.logged_model.details.delete_button": "",
   "mlflow.logged_model.details.delete_modal": "",
@@ -1712,7 +1688,11 @@ module.exports = {
   "mlflow.logged_model.status": "",
   "mlflow.logged_model.traces.traces_table.quickstart_docs_link": "",
   "mlflow.logged_model.traces.traces_table.set_active_model_quickstart_snippet_copy": "",
+
+  // -- mlflow.logged_model_table --
   "mlflow.logged_model_table.group_toggle": "",
+
+  // -- mlflow.logged_models --
   "mlflow.logged_models.details.description.edit": "",
   "mlflow.logged_models.details.model_version_link": "",
   "mlflow.logged_models.details_header.experiment_link": "",
@@ -1738,136 +1718,18 @@ module.exports = {
   "mlflow.logged_models.table.original_model_tooltip_link": "",
   "mlflow.logged_models.table.registered_model_link": "",
   "mlflow.logged_models.table.source_run_link": "",
-  "mlflow.mcp_registry.add_tools_modal": "",
-  "mlflow.mcp_registry.add_tools_modal.discover.copy": "",
-  "mlflow.mcp_registry.beta_tag": "",
-  "mlflow.mcp_registry.card": "",
-  "mlflow.mcp_registry.card.connect": "",
-  "mlflow.mcp_registry.card.endpoints_tooltip": "",
-  "mlflow.mcp_registry.compare.status": "",
-  "mlflow.mcp_registry.compare.switch_sides": "",
-  "mlflow.mcp_registry.compare.switch_sides.tooltip": "",
-  "mlflow.mcp_registry.create.display_name": "",
-  "mlflow.mcp_registry.create.icons_help": "",
-  "mlflow.mcp_registry.create.method_toggle": "",
-  "mlflow.mcp_registry.create.sdk_snippet.copy_button": "",
-  "mlflow.mcp_registry.create.source": "",
-  "mlflow.mcp_registry.create.status": "",
-  "mlflow.mcp_registry.create.tag.add": "",
-  "mlflow.mcp_registry.create.tag.add.tooltip": "",
-  "mlflow.mcp_registry.create.tag.value": "",
-  "mlflow.mcp_registry.create_server_button": "",
-  "mlflow.mcp_registry.create_server_version.error": "",
-  "mlflow.mcp_registry.create_server_version.modal": "",
-  "mlflow.mcp_registry.detail.access_endpoints_help": "",
-  "mlflow.mcp_registry.detail.actions": "",
-  "mlflow.mcp_registry.detail.actions.delete": "",
-  "mlflow.mcp_registry.detail.actions.edit": "",
-  "mlflow.mcp_registry.detail.add_endpoint": "",
-  "mlflow.mcp_registry.detail.add_tools": "",
-  "mlflow.mcp_registry.detail.breadcrumb_back": "",
-  "mlflow.mcp_registry.detail.connection_format": "",
-  "mlflow.mcp_registry.detail.connection_snippet.copy_button": "",
-  "mlflow.mcp_registry.detail.create_version": "",
-  "mlflow.mcp_registry.detail.delete_endpoint_modal": "",
-  "mlflow.mcp_registry.detail.delete_server_modal": "",
-  "mlflow.mcp_registry.detail.delete_version": "",
-  "mlflow.mcp_registry.detail.delete_version_modal": "",
-  "mlflow.mcp_registry.detail.details_drawer": "",
-  "mlflow.mcp_registry.detail.endpoint.delete": "",
-  "mlflow.mcp_registry.detail.endpoint.edit": "",
-  "mlflow.mcp_registry.detail.endpoint_drawer.version_status": "",
-  "mlflow.mcp_registry.detail.endpoint_transport_tag": "",
-  "mlflow.mcp_registry.detail.env_var_required": "",
-  "mlflow.mcp_registry.detail.env_var_secret": "",
-  "mlflow.mcp_registry.detail.error": "",
-  "mlflow.mcp_registry.detail.field_copy": "",
-  "mlflow.mcp_registry.detail.field_copy_tooltip": "",
-  "mlflow.mcp_registry.detail.field_link": "",
-  "mlflow.mcp_registry.detail.field_tag": "",
-  "mlflow.mcp_registry.detail.header_required": "",
-  "mlflow.mcp_registry.detail.header_secret": "",
-  "mlflow.mcp_registry.detail.package": "",
-  "mlflow.mcp_registry.detail.package_registry_tag": "",
-  "mlflow.mcp_registry.detail.packages_help": "",
-  "mlflow.mcp_registry.detail.raw_json.toggle": "",
-  "mlflow.mcp_registry.detail.raw_tools_json.toggle": "",
-  "mlflow.mcp_registry.detail.remote": "",
-  "mlflow.mcp_registry.detail.remote_transport_tag": "",
-  "mlflow.mcp_registry.detail.remotes_help": "",
-  "mlflow.mcp_registry.detail.repository": "",
-  "mlflow.mcp_registry.detail.select_baseline.tooltip": "",
-  "mlflow.mcp_registry.detail.select_compared.tooltip": "",
-  "mlflow.mcp_registry.detail.tags.edit": "",
-  "mlflow.mcp_registry.detail.toggle_env_vars": "",
-  "mlflow.mcp_registry.detail.toggle_packages": "",
-  "mlflow.mcp_registry.detail.toggle_tools": "",
-  "mlflow.mcp_registry.detail.tool_annotation_tag": "",
-  "mlflow.mcp_registry.detail.tool_input_schema.toggle": "",
-  "mlflow.mcp_registry.detail.tool_name_tag": "",
-  "mlflow.mcp_registry.detail.tool_output_schema.toggle": "",
-  "mlflow.mcp_registry.detail.unavailable_tag": "",
-  "mlflow.mcp_registry.detail.unavailable_tooltip": "",
-  "mlflow.mcp_registry.detail.version.add_metadata": "",
-  "mlflow.mcp_registry.detail.version.edit_metadata": "",
-  "mlflow.mcp_registry.detail.version.edit_status": "",
-  "mlflow.mcp_registry.detail.version.status_select": "",
-  "mlflow.mcp_registry.detail.version.status_update_error": "",
-  "mlflow.mcp_registry.detail.version_status": "",
-  "mlflow.mcp_registry.detail.version_status_tag": "",
-  "mlflow.mcp_registry.detail.version_tabs": "",
-  "mlflow.mcp_registry.detail.versions.header": "",
-  "mlflow.mcp_registry.detail.versions_error": "",
-  "mlflow.mcp_registry.detail.view_details_drawer": "",
-  "mlflow.mcp_registry.detail.view_toggle": "",
-  "mlflow.mcp_registry.detail.website": "",
-  "mlflow.mcp_registry.edit_aliases": "",
-  "mlflow.mcp_registry.edit_server_modal": "",
-  "mlflow.mcp_registry.edit_server_modal.description": "",
-  "mlflow.mcp_registry.edit_server_modal.display_name": "",
-  "mlflow.mcp_registry.edit_server_modal.error": "",
-  "mlflow.mcp_registry.edit_server_modal.icons_help": "",
-  "mlflow.mcp_registry.empty_state.create_server": "",
-  "mlflow.mcp_registry.endpoint_modal": "",
-  "mlflow.mcp_registry.endpoint_modal.endpoint": "",
-  "mlflow.mcp_registry.endpoint_modal.error": "",
-  "mlflow.mcp_registry.endpoint_modal.server": "",
-  "mlflow.mcp_registry.endpoint_modal.target": "",
-  "mlflow.mcp_registry.endpoint_modal.transport": "",
-  "mlflow.mcp_registry.error": "",
-  "mlflow.mcp_registry.filter_active": "",
-  "mlflow.mcp_registry.filter_has_endpoints": "",
-  "mlflow.mcp_registry.grid.pagination": "",
-  "mlflow.mcp_registry.icon_editor.add": "",
-  "mlflow.mcp_registry.icon_editor.add.tooltip": "",
-  "mlflow.mcp_registry.icon_editor.draft_theme": "",
-  "mlflow.mcp_registry.icon_editor.draft_url": "",
-  "mlflow.mcp_registry.icon_editor.preview_src.tooltip": "",
-  "mlflow.mcp_registry.icon_editor.remove": "",
-  "mlflow.mcp_registry.icon_editor.remove.tooltip": "",
-  "mlflow.mcp_registry.icon_editor.theme": "",
-  "mlflow.mcp_registry.icon_editor.url": "",
-  "mlflow.mcp_registry.latest_alias": "",
-  "mlflow.mcp_registry.latest_alias_tooltip": "",
-  "mlflow.mcp_registry.quick_connect.version_status": "",
-  "mlflow.mcp_registry.quick_connect_modal": "",
-  "mlflow.mcp_registry.search": "",
-  "mlflow.mcp_registry.search.help_tooltip": "",
-  "mlflow.mcp_registry.table.description_tooltip": "",
-  "mlflow.mcp_registry.table.edit_tags": "",
-  "mlflow.mcp_registry.table.empty_state.create_server": "",
-  "mlflow.mcp_registry.table.endpoint_tooltip": "",
-  "mlflow.mcp_registry.table.header": "",
-  "mlflow.mcp_registry.table.name_link": "",
-  "mlflow.mcp_registry.table.pagination": "",
-  "mlflow.mcp_registry.table.transport_tag": "",
-  "mlflow.mcp_registry.view_toggle": "",
+
+  // -- mlflow.model-registry --
   "mlflow.model-registry.model-list.model-name.tooltip": "",
   "mlflow.model-registry.model-list.model-tag.tooltip": "",
   "mlflow.model-registry.model-view.model-versions.version-status.tooltip": "",
+
+  // -- mlflow.model-trace-explorer --
   "mlflow.model-trace-explorer.add-human-feedback": "",
   "mlflow.model-trace-explorer.run-judge": "",
   "mlflow.model-trace-explorer.session-id-tag": "",
+
+  // -- mlflow.model_registry --
   "mlflow.model_registry.aliases.overflow_version_link": "",
   "mlflow.model_registry.aliases.version_link": "",
   "mlflow.model_registry.compare_versions.metric_link": "",
@@ -1887,19 +1749,27 @@ module.exports = {
   "mlflow.model_registry.version_view.breadcrumb_registered_models_link": "",
   "mlflow.model_registry.version_view.copied_from_link": "",
   "mlflow.model_registry.version_view.source_run_link": "",
+
+  // -- mlflow.model_trace_explorer --
   "mlflow.model_trace_explorer.feedback_item.judge_trace_link": "",
   "mlflow.model_trace_explorer.header.session_id_link": "",
   "mlflow.model_trace_explorer.header_details.tag-session-id": "",
   "mlflow.model_trace_explorer.linked_prompts.prompt_link": "",
   "mlflow.model_trace_explorer.timeline.gateway_trace_link": "",
+
+  // -- mlflow.node-level-metric-charts --
   "mlflow.node-level-metric-charts.filter.by_gpu": "",
   "mlflow.node-level-metric-charts.filter.by_node": "",
   "mlflow.node-level-metric-charts.filter.clear": "",
   "mlflow.node-level-metric-charts.filter.trigger": "",
+
+  // -- mlflow.notebook --
   "mlflow.notebook.pagination": "",
   "mlflow.notebook.trace-ui-info": "",
   "mlflow.notebook.trace-ui-learn-more-link": "",
   "mlflow.notebook.trace-ui-see-in-mlflow-link": "",
+
+  // -- mlflow.overview --
   "mlflow.overview.quality.assessment.view_traces_link": "",
   "mlflow.overview.quality.assessment_timeseries.view_traces_link": "",
   "mlflow.overview.quality.quality_summary_table": "",
@@ -1913,7 +1783,11 @@ module.exports = {
   "mlflow.overview.usage.trace_cost_over_time.dimension": "",
   "mlflow.overview.usage.trace_cost_over_time.item_selector": "",
   "mlflow.overview.usage.traces.view_traces_link": "",
+
+  // -- mlflow.playground --
   "mlflow.playground.clear": "",
+  "mlflow.playground.json_code_block.copy": "",
+  "mlflow.playground.json_code_block.toggle": "",
   "mlflow.playground.load_from_registry": "",
   "mlflow.playground.output.error": "",
   "mlflow.playground.params.drawer": "",
@@ -1937,7 +1811,7 @@ module.exports = {
   "mlflow.playground.prompt_registry_picker.prompt": "",
   "mlflow.playground.prompt_registry_picker.text_prompt_hint": "",
   "mlflow.playground.prompt_registry_picker.version": "",
-  "mlflow.playground.response_format.schema": "",
+  "mlflow.playground.response_format.format": "",
   "mlflow.playground.response_format.type": "",
   "mlflow.playground.save_prompt_version": "",
   "mlflow.playground.save_prompt_version.commit_message": "",
@@ -1950,11 +1824,18 @@ module.exports = {
   "mlflow.playground.save_prompt_version.target": "",
   "mlflow.playground.save_to_registry": "",
   "mlflow.playground.submit": "",
-  "mlflow.playground.tools.input": "",
+  "mlflow.playground.tools.add": "",
+  "mlflow.playground.tools.add_tool": "",
+  "mlflow.playground.tools.description": "",
+  "mlflow.playground.tools.format": "",
+  "mlflow.playground.tools.name": "",
+  "mlflow.playground.tools.remove": "",
   "mlflow.playground.tools.tool_choice": "",
   "mlflow.playground.variables.drawer": "",
   "mlflow.playground.variables.drawer.trigger": "",
   "mlflow.playground.variables.input": "",
+
+  // -- mlflow.prompts --
   "mlflow.prompts.chat_creator.add_after": "",
   "mlflow.prompts.chat_creator.content": "",
   "mlflow.prompts.chat_creator.remove": "",
@@ -2013,7 +1894,11 @@ module.exports = {
   "mlflow.prompts.version_runs.run_link": "",
   "mlflow.prompts.versions-table.row": "",
   "mlflow.prompts.versions.table.header": "",
+
+  // -- mlflow.quality_tab --
   "mlflow.quality_tab.empty_state.learn_more_link": "",
+
+  // -- mlflow.regression-test-detail --
   "mlflow.regression-test-detail.assertion-expand": "",
   "mlflow.regression-test-detail.col-assertion": "",
   "mlflow.regression-test-detail.col-result": "",
@@ -2022,9 +1907,8 @@ module.exports = {
   "mlflow.regression-test-detail.open-trace": "",
   "mlflow.regression-test-detail.prev": "",
   "mlflow.regression-test-detail.result-pill": "",
-  "mlflow.run-page.view-mode-switch": "",
-  "mlflow.run-view.compare-button": "",
-  "mlflow.run-view.compare-button.tooltip": "",
+
+  // -- mlflow.run --
   "mlflow.run.artifact_view.create_run.tooltip": "",
   "mlflow.run.artifact_view.evaluate_all.tooltip": "",
   "mlflow.run.artifact_view.preview_close": "",
@@ -2033,17 +1917,27 @@ module.exports = {
   "mlflow.run.artifact_view.table_settings.tooltip": "",
   "mlflow.run.row_actions.pinning.tooltip": "",
   "mlflow.run.row_actions.visibility.tooltip": "",
+
+  // -- mlflow.run-page --
+  "mlflow.run-page.view-mode-switch": "",
+
+  // -- mlflow.run-view --
+  "mlflow.run-view.compare-button": "",
+  "mlflow.run-view.compare-button.tooltip": "",
+
+  // -- mlflow.run_details --
   "mlflow.run_details.header.register-model-button.tooltip": "",
   "mlflow.run_details.header.register_model_from_logged_model.button": "",
   "mlflow.run_details.header.register_model_from_logged_model.dropdown_menu_item": "",
-  "mlflow.run_details.header.register_model_from_logged_model.dropdown_menu_item.view_model_button":
-    "",
+  "mlflow.run_details.header.register_model_from_logged_model.dropdown_menu_item.view_model_button": "",
   "mlflow.run_details.overview.child_runs.load_more_button": "",
   "mlflow.run_details.overview.source.commit_hash": "",
   "mlflow.run_details.overview.source.commit_hash_popover": "",
   "mlflow.run_details.overview.tags.add_button": "",
   "mlflow.run_details.overview.tags.edit_button": "",
   "mlflow.run_details.overview.tags.edit_button.tooltip": "",
+
+  // -- mlflow.run_page --
   "mlflow.run_page.header.compare_experiments_link": "",
   "mlflow.run_page.header.experiment_name_link": "",
   "mlflow.run_page.header.experiment_tab_link": "",
@@ -2063,11 +1957,17 @@ module.exports = {
   "mlflow.run_page.overview.registered_model_link": "",
   "mlflow.run_page.overview.registered_prompt_link": "",
   "mlflow.run_page.overview.user_link": "",
+
+  // -- mlflow.runs_chart --
   "mlflow.runs_chart.tooltip.hide_run": "",
   "mlflow.runs_chart.tooltip.pin_run": "",
+
+  // -- mlflow.schema_table --
   "mlflow.schema_table.header.name": "",
   "mlflow.schema_table.header.type": "",
   "mlflow.schema_table.search_input": "",
+
+  // -- mlflow.settings --
   "mlflow.settings.demo.clear-all-button": "",
   "mlflow.settings.demo.confirm-modal": "",
   "mlflow.settings.general.preferences-card": "",
@@ -2088,12 +1988,13 @@ module.exports = {
   "mlflow.settings.webhooks.test-button": "",
   "mlflow.settings.webhooks.test-result-alert": "",
   "mlflow.settings.webhooks.url-input": "",
+
+  // -- mlflow.shared --
   "mlflow.shared.copy_button": "",
   "mlflow.shared.copy_button.tooltip": "",
+
+  // -- mlflow.sidebar --
   "mlflow.sidebar.account": "",
-  "mlflow.sidebar.assistant_beta_tag": "",
-  "mlflow.sidebar.assistant_button": "",
-  "mlflow.sidebar.assistant_tooltip": "",
   "mlflow.sidebar.docs_link": "",
   "mlflow.sidebar.experiments_tab_link": "",
   "mlflow.sidebar.gateway_budgets_tab_link": "",
@@ -2105,8 +2006,8 @@ module.exports = {
   "mlflow.sidebar.logo_home_link": "",
   "mlflow.sidebar.logout": "",
   "mlflow.sidebar.manage": "",
-  "mlflow.sidebar.mcp_registry_tab_link": "",
   "mlflow.sidebar.models_tab_link": "",
+  "mlflow.sidebar.page_composer_link": "",
   "mlflow.sidebar.prompts_tab_link": "",
   "mlflow.sidebar.settings_back_link": "",
   "mlflow.sidebar.settings_general_link": "",
@@ -2116,6 +2017,8 @@ module.exports = {
   "mlflow.sidebar.workflow_switch": "",
   "mlflow.sidebar.workflow_switch.tooltip": "",
   "mlflow.sidebar.workspace_home_link": "",
+
+  // -- mlflow.storybook --
   "mlflow.storybook.country-selector": "",
   "mlflow.storybook.custom-render": "",
   "mlflow.storybook.empty-modal": "",
@@ -2129,14 +2032,14 @@ module.exports = {
   "mlflow.storybook.selector-modal": "",
   "mlflow.storybook.simple": "",
   "mlflow.storybook.with-description": "",
+
+  // -- mlflow.tags_cell_renderer --
   "mlflow.tags_cell_renderer.traces_table.edit_tag": "",
+
+  // -- mlflow.telemetry --
   "mlflow.telemetry.info_alert.documentation_link": "",
-  "mlflow.traces-tab.trace-count": "",
-  "mlflow.traces-table.column-header-tooltip": "",
-  "mlflow.traces-table.group-by-session-button": "",
-  "mlflow.traces-table.group-by-session-button.tooltip": "",
-  "mlflow.traces-table.refresh-button": "",
-  "mlflow.traces-table.refresh-button.tooltip": "",
+
+  // -- mlflow.traces --
   "mlflow.traces.empty_state_generic_quickstart.copy": "",
   "mlflow.traces.issue-detection-modal": "",
   "mlflow.traces.issue-detection-modal.cancel": "",
@@ -2157,6 +2060,9 @@ module.exports = {
   "mlflow.traces.issue-detection.api-key.mode": "",
   "mlflow.traces.issue-detection.api-key.secret-input": "",
   "mlflow.traces.issue-detection.cancel-button": "",
+  "mlflow.traces.issue-detection.completed-toast.view-results": "",
+  "mlflow.traces.issue-detection.failed-toast.view-details": "",
+  "mlflow.traces.issue-detection.started-toast.view-progress": "",
   "mlflow.traces.issue-detection.view-issues-button": "",
   "mlflow.traces.issue-detection.view-issues-link": "",
   "mlflow.traces.issue-detection.view-traces-link": "",
@@ -2176,6 +2082,18 @@ module.exports = {
   "mlflow.traces.onboarding.step2.otel_code.copy": "",
   "mlflow.traces.onboarding.step2.otel_install.copy": "",
   "mlflow.traces.onboarding.trace_with_agent": "",
+
+  // -- mlflow.traces-tab --
+  "mlflow.traces-tab.trace-count": "",
+
+  // -- mlflow.traces-table --
+  "mlflow.traces-table.column-header-tooltip": "",
+  "mlflow.traces-table.group-by-session-button": "",
+  "mlflow.traces-table.group-by-session-button.tooltip": "",
+  "mlflow.traces-table.refresh-button": "",
+  "mlflow.traces-table.refresh-button.tooltip": "",
+
+  // -- mlflow.usage --
   "mlflow.usage.metrics_filter": "",
   "mlflow.usage.metrics_filter.add_row": "",
   "mlflow.usage.metrics_filter.apply": "",
@@ -2184,10 +2102,11 @@ module.exports = {
   "mlflow.usage.metrics_filter.delete_row": "",
   "mlflow.usage.metrics_filter.operator": "",
   "mlflow.usage.metrics_filter.value": "",
-  "mlflow_header.toggle_sidebar_button": "",
-  "open-modal": "",
-  promptType: "",
+
+  // -- shared.media-rendering-utils --
   "shared.media-rendering-utils.fetch-download": "",
+
+  // -- shared.model-trace-explorer --
   "shared.model-trace-explorer.add-expectation": "",
   "shared.model-trace-explorer.add-feedback": "",
   "shared.model-trace-explorer.add-feedback-in-group-tooltip": "",
@@ -2304,15 +2223,5 @@ module.exports = {
   "shared.model-trace-explorer.trace-too-large.force-display-button": "",
   "shared.model-trace-explorer.view-mode-toggle": "",
   "shared.model-trace-explorer.workflow-node-tooltip": "",
-  "storybook.long-form.description": "",
-  "storybook.long-form.model": "",
-  "storybook.long-form.name": "",
-  "storybook.long-form.provider": "",
-  "traces-v3-empty-state-button": "",
-  "virtualized-table-header": "",
-  "web-shared.genai-traces-table.evaluations-review-assessment.tooltip": "",
-  "web-shared.genai-traces-table.key-value-tag.full-view-tooltip": "",
-  "web-shared.time-ago": "",
-  workspace_selector: "",
-  "workspace_selector.tooltip": "",
+
 };

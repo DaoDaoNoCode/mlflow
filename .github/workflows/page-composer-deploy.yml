@@ -1,0 +1,161 @@
+name: Page Composer — Sync, Build & Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      variant:
+        description: "Which variant to build and deploy"
+        required: true
+        type: choice
+        options:
+          - upstream
+          - downstream
+          - both
+  push:
+    branches:
+      - page-composer-upstream
+      - page-composer-downstream
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  REGISTRY: quay.io
+  REGISTRY_ORG: juntao_wang
+  JS_DIR: mlflow/server/js
+
+jobs:
+  build:
+    if: github.repository == 'DaoDaoNoCode/mlflow'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - variant: upstream
+            branch: page-composer-upstream
+          - variant: downstream
+            branch: page-composer-downstream
+    steps:
+      - name: Determine if this matrix entry should run
+        id: guard
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_VARIANT: ${{ github.event.inputs.variant }}
+          MATRIX_VARIANT: ${{ matrix.variant }}
+          PUSH_BRANCH: ${{ github.ref_name }}
+          MATRIX_BRANCH: ${{ matrix.branch }}
+        run: |
+          skip=false
+          if [[ "$EVENT_NAME" == "push" && "$PUSH_BRANCH" != "$MATRIX_BRANCH" ]]; then
+            skip=true
+          elif [[ "$EVENT_NAME" == "workflow_dispatch" && "$INPUT_VARIANT" != "both" && "$INPUT_VARIANT" != "$MATRIX_VARIANT" ]]; then
+            skip=true
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        if: steps.guard.outputs.skip != 'true'
+        with:
+          ref: ${{ matrix.branch }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        if: steps.guard.outputs.skip != 'true'
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        if: steps.guard.outputs.skip != 'true'
+        working-directory: ${{ env.JS_DIR }}
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+        run: yarn install
+
+      - name: Build standalone composer
+        if: steps.guard.outputs.skip != 'true'
+        working-directory: ${{ env.JS_DIR }}
+        env:
+          NODE_ENV: production
+        run: yarn webpack --config src/page-composer/deploy/webpack.composer.js
+
+      - name: Login to Quay.io
+        if: steps.guard.outputs.skip != 'true'
+        uses: docker/login-action@b45d80f862d83dbcd57f89517bcf500b2ab88fb2 # v4.0.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.QUAY_USERNAME }}
+          password: ${{ secrets.QUAY_PASSWORD }}
+
+      - name: Build and push image
+        if: steps.guard.outputs.skip != 'true'
+        uses: docker/build-push-action@d08e5c354a6adb9ed34480a06d141179aa583294 # v7.0.0
+        with:
+          context: ${{ env.JS_DIR }}
+          file: ${{ env.JS_DIR }}/src/page-composer/deploy/Dockerfile
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.REGISTRY_ORG }}/page-composer:${{ matrix.variant }}
+
+  deploy:
+    needs: [build]
+    if: github.repository == 'DaoDaoNoCode/mlflow' && !cancelled() && needs.build.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Determine which variants to rollout
+        id: variants
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_VARIANT: ${{ github.event.inputs.variant }}
+          PUSH_BRANCH: ${{ github.ref_name }}
+        run: |
+          if [[ "$EVENT_NAME" == "push" ]]; then
+            case "$PUSH_BRANCH" in
+              page-composer-upstream)   echo "rollout=upstream" >> "$GITHUB_OUTPUT" ;;
+              page-composer-downstream) echo "rollout=downstream" >> "$GITHUB_OUTPUT" ;;
+              *)                        echo "rollout=both" >> "$GITHUB_OUTPUT" ;;
+            esac
+          elif [[ "$EVENT_NAME" == "workflow_dispatch" && "$INPUT_VARIANT" != "both" ]]; then
+            echo "rollout=$INPUT_VARIANT" >> "$GITHUB_OUTPUT"
+          else
+            echo "rollout=both" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install oc CLI
+        run: |
+          curl -sL https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-linux.tar.gz | tar xzf - -C /usr/local/bin oc
+          oc version --client
+
+      - name: Login to OpenShift
+        env:
+          OC_TOKEN: ${{ secrets.OPENSHIFT_TOKEN }}
+        run: oc login --token="$OC_TOKEN" --server=https://api.juntwang-new.z96p.p3.openshiftapps.com:443
+
+      - name: Rollout restart
+        env:
+          ROLLOUT: ${{ steps.variants.outputs.rollout }}
+        run: |
+          if [[ "$ROLLOUT" == "upstream" || "$ROLLOUT" == "both" ]]; then
+            oc -n page-composer rollout restart deployment/page-composer-upstream
+          fi
+          if [[ "$ROLLOUT" == "downstream" || "$ROLLOUT" == "both" ]]; then
+            oc -n page-composer rollout restart deployment/page-composer-downstream
+          fi
+
+      - name: Print URLs
+        env:
+          ROLLOUT: ${{ steps.variants.outputs.rollout }}
+        run: |
+          [[ "$ROLLOUT" == "upstream" || "$ROLLOUT" == "both" ]] && echo "Upstream:   https://page-composer-upstream.apps.rosa.juntwang-new.z96p.p3.openshiftapps.com"
+          [[ "$ROLLOUT" == "downstream" || "$ROLLOUT" == "both" ]] && echo "Downstream: https://page-composer-downstream.apps.rosa.juntwang-new.z96p.p3.openshiftapps.com"
+          true
