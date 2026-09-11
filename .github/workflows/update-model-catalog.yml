@@ -69,13 +69,13 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git switch -c "$branch"
           git add "$catalog_dir"
-          git commit -s -m 'Update model catalog from upstream release'
+          git commit -s -m 'drop: Update model catalog from upstream release'
           git push --force --set-upstream origin "$branch"
 
           pr_number=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
           if [ -z "$pr_number" ]; then
             gh pr create \
-              --title 'Update model catalog from upstream release' \
+              --title 'drop: Update model catalog from upstream release' \
               --body 'Automated refresh from MLflow model-catalog/latest release assets.' \
               --reviewer HumairAK \
               --reviewer mprahl
