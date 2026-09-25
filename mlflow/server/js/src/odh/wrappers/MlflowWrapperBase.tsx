@@ -152,6 +152,29 @@ const MlflowWrapperBase: React.FC<MlflowFederatedShellProps> = ({
 
   if (!intl) return <LegacySkeleton />;
 
+  const routedContent = (
+    <AppErrorBoundary>
+      <EmotionThemeProvider theme={PATTERN_FLY_TOKEN_TRANSLATION}>
+        <DarkThemeProvider setIsDarkTheme={setIsDarkTheme}>
+          <QueryClientProvider client={queryClient}>
+            <ServerInfoProvider>
+              <HostWorkflowTypeProvider workflowType={workflowType}>
+                {memoryRouterEntries ? (
+                  <React.Suspense fallback={<LegacySkeleton />}>{children}</React.Suspense>
+                ) : (
+                  <WorkspaceSync>
+                    {breadcrumbReporter}
+                    <React.Suspense fallback={<LegacySkeleton />}>{children}</React.Suspense>
+                  </WorkspaceSync>
+                )}
+              </HostWorkflowTypeProvider>
+            </ServerInfoProvider>
+          </QueryClientProvider>
+        </DarkThemeProvider>
+      </EmotionThemeProvider>
+    </AppErrorBoundary>
+  );
+
   return (
     <div className={`mlflow-federated pf-shell-root${isDarkTheme ? ` ${DARK_MODE_CLASS_NAME}` : ''}`}>
       <ModularArchContextProvider config={modularArchConfig}>
@@ -161,32 +184,15 @@ const MlflowWrapperBase: React.FC<MlflowFederatedShellProps> = ({
               <DesignSystemEventProvider callback={logObservabilityEvent}>
                 <ThemeProvider isDarkTheme={isDarkTheme}>
                   <DesignSystemProvider getPopupContainer={getPopupContainer}>
-                    <AppErrorBoundary>
-                      <EmotionThemeProvider theme={PATTERN_FLY_TOKEN_TRANSLATION}>
-                        <DarkThemeProvider setIsDarkTheme={setIsDarkTheme}>
-                          <QueryClientProvider client={queryClient}>
-                            <ServerInfoProvider>
-                              {memoryRouterEntries ? (
-                                <MemoryRouter initialEntries={memoryRouterEntries}>
-                                  <HostWorkflowTypeProvider workflowType={workflowType}>
-                                    <React.Suspense fallback={<LegacySkeleton />}>{children}</React.Suspense>
-                                  </HostWorkflowTypeProvider>
-                                </MemoryRouter>
-                              ) : (
-                                <BrowserRouter basename={basename}>
-                                  <HostWorkflowTypeProvider workflowType={workflowType}>
-                                    <WorkspaceSync>
-                                      {breadcrumbReporter}
-                                      <React.Suspense fallback={<LegacySkeleton />}>{children}</React.Suspense>
-                                    </WorkspaceSync>
-                                  </HostWorkflowTypeProvider>
-                                </BrowserRouter>
-                              )}
-                            </ServerInfoProvider>
-                          </QueryClientProvider>
-                        </DarkThemeProvider>
-                      </EmotionThemeProvider>
-                    </AppErrorBoundary>
+                    {/*
+                     * AppErrorBoundary renders the global notification holder. Keep it under
+                     * MLflow's router so notification content can safely use v6 routing context.
+                     */}
+                    {memoryRouterEntries ? (
+                      <MemoryRouter initialEntries={memoryRouterEntries}>{routedContent}</MemoryRouter>
+                    ) : (
+                      <BrowserRouter basename={basename}>{routedContent}</BrowserRouter>
+                    )}
                   </DesignSystemProvider>
                 </ThemeProvider>
               </DesignSystemEventProvider>
