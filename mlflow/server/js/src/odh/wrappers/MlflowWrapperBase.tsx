@@ -47,7 +47,8 @@ import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import { telemetryClient } from '../../telemetry';
 import { useMLflowDarkTheme } from '../../common/hooks/useMLflowDarkTheme';
 import { useEmbeddedLinkInterceptor } from '../../common/hooks/useEmbeddedLinkInterceptor';
-import { WorkflowTypeProvider } from '../../common/contexts/WorkflowTypeContext';
+import { HostWorkflowTypeProvider } from '../contexts/ForcedWorkflowTypeProvider';
+import type { WorkflowType } from '../../common/contexts/WorkflowTypeContext';
 import AppErrorBoundary from '../../common/components/error-boundaries/AppErrorBoundary';
 
 export interface MlflowFederatedShellProps {
@@ -62,6 +63,7 @@ export interface MlflowFederatedShellProps {
    * the initial route path matching the internal route structure.
    */
   memoryRouterEntries?: string[];
+  workflowType?: WorkflowType;
 }
 
 const FEDERATED_PORTAL_CONTAINER_ATTR = 'data-mlflow-federated-portal-container';
@@ -100,6 +102,7 @@ const MlflowWrapperBase: React.FC<MlflowFederatedShellProps> = ({
   breadcrumbReporter,
   children,
   memoryRouterEntries,
+  workflowType,
 }) => {
   const portalContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -165,18 +168,18 @@ const MlflowWrapperBase: React.FC<MlflowFederatedShellProps> = ({
                             <ServerInfoProvider>
                               {memoryRouterEntries ? (
                                 <MemoryRouter initialEntries={memoryRouterEntries}>
-                                  <WorkflowTypeProvider>
+                                  <HostWorkflowTypeProvider workflowType={workflowType}>
                                     <React.Suspense fallback={<LegacySkeleton />}>{children}</React.Suspense>
-                                  </WorkflowTypeProvider>
+                                  </HostWorkflowTypeProvider>
                                 </MemoryRouter>
                               ) : (
                                 <BrowserRouter basename={basename}>
-                                  <WorkflowTypeProvider>
+                                  <HostWorkflowTypeProvider workflowType={workflowType}>
                                     <WorkspaceSync>
                                       {breadcrumbReporter}
                                       <React.Suspense fallback={<LegacySkeleton />}>{children}</React.Suspense>
                                     </WorkspaceSync>
-                                  </WorkflowTypeProvider>
+                                  </HostWorkflowTypeProvider>
                                 </BrowserRouter>
                               )}
                             </ServerInfoProvider>

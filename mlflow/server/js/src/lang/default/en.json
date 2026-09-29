@@ -13127,6 +13127,10 @@
     "defaultMessage": "Create a new key if a different provider is needed.",
     "description": "Tooltip suggestion to create new key for different provider"
   },
+  "tCFvX8": {
+    "defaultMessage": "Versions",
+    "description": "Label for the versions section in the MLflow experiment navbar when the prompts tab is not shown"
+  },
   "tCkDwC": {
     "defaultMessage": "Create API Key",
     "description": "Title for create API key modal"
