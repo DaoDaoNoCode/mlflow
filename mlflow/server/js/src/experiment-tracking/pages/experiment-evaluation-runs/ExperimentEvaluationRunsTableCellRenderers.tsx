@@ -34,6 +34,7 @@ import { useExperimentEvaluationRunsRowVisibility } from './hooks/useExperimentE
 import { RunPageTabName } from '../../constants';
 import {
   shouldEnableImprovedEvalRunsComparison,
+  shouldEnableIssueDetection,
   shouldShowEvalRunsIssuesPanel,
 } from '../../../common/utils/FeatureUtils';
 import {
@@ -89,7 +90,7 @@ export const RunNameCell: ColumnDef<RunEntityOrGroupData>['cell'] = ({
   const isIssueDetectionRun = tags.some(
     (tag) => tag.key === MLFLOW_RUN_TYPE_TAG && tag.value === MLFLOW_RUN_TYPE_VALUE_ISSUE_DETECTION,
   );
-  const showIssuesPanelFlag = shouldShowEvalRunsIssuesPanel();
+  const showIssuesPanelFlag = shouldShowEvalRunsIssuesPanel() && shouldEnableIssueDetection();
 
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
