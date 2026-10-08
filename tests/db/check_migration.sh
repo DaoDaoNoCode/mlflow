@@ -8,7 +8,7 @@ cd tests/db
 locked=$(mktemp)
 uv export --quiet --locked --no-default-groups --extra db --group db-test \
   --no-emit-workspace --no-hashes --output-file "$locked" > /dev/null
-uv run --quiet --isolated --no-project --with mlflow --with-requirements "$locked" \
+uv run --quiet --isolated --no-project --with mlflow==3.10.1 --with-requirements "$locked" \
   python check_migration.py pre-migration
 # Run the post-migration step with mlflow from the repository
 uv run --no-sync mlflow db upgrade $MLFLOW_TRACKING_URI

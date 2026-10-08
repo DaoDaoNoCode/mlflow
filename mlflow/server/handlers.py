@@ -5534,6 +5534,7 @@ def _validate_trace_ids_in_experiment(
 
 @catch_mlflow_exception
 @_disable_if_artifacts_only
+@_disable_if_gateway_disabled
 def _invoke_issue_detection_handler():
     """
     Invoke issue detection on traces asynchronously.
@@ -7571,6 +7572,7 @@ def _get_secrets_config():
 
 @catch_mlflow_exception
 @_disable_if_artifacts_only
+@_disable_if_gateway_disabled
 def _invoke_scorer_handler():
     """
     Invoke a scorer on traces asynchronously.
