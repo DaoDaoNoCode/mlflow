@@ -25,8 +25,7 @@ from starlette.middleware.wsgi import WSGIResponder, build_environ
 from starlette.types import Receive, Scope, Send
 
 from mlflow.assistant.providers.base import assistant_sandbox_enabled
-from mlflow.environment_variables import MLFLOW_ENABLE_REMOTE_ASSISTANT
-from mlflow.environment_variables import MLFLOW_ENABLE_ASSISTANT
+from mlflow.environment_variables import MLFLOW_ENABLE_ASSISTANT, MLFLOW_ENABLE_REMOTE_ASSISTANT
 from mlflow.exceptions import MlflowException
 from mlflow.gateway.constants import MLFLOW_GATEWAY_DURATION_HEADER, MLFLOW_GATEWAY_OVERHEAD_HEADER
 from mlflow.gateway.providers.utils import provider_call_duration_ms

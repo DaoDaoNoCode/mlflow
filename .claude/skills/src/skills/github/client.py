@@ -46,6 +46,17 @@ class GitHubClient:
         data = await self._get_json(f"/repos/{owner}/{repo}/pulls/{pr_number}")
         return PullRequest.model_validate(data)
 
+    async def graphql(self, query: str, variables: dict[str, Any]) -> dict[str, Any]:
+        if self._session is None:
+            raise RuntimeError("GitHubClient must be used as async context manager")
+        payload = {"query": query, "variables": variables}
+        async with self._session.post(
+            "https://api.github.com/graphql",
+            json=payload,
+        ) as resp:
+            resp.raise_for_status()
+            return cast(dict[str, Any], await resp.json())
+
     async def get_raw(self, endpoint: str) -> aiohttp.ClientResponse:
         """Get raw response for streaming."""
         if self._session is None:

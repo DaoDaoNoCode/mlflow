@@ -255,7 +255,7 @@ docs = [
 ]
 
 [tool.uv]
-exclude-newer = "P14D"
+exclude-newer = "P7D"
 exclude-newer-package = { torch = false, torchvision = false, mlflow-kubernetes-plugins = false, starlette = false }
 required-version = ">=0.12.16"
 constraint-dependencies = [

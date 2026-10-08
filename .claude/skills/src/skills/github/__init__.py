@@ -1,10 +1,11 @@
 from skills.github.client import GitHubClient
 from skills.github.types import Job, JobStep
-from skills.github.utils import get_github_token
+from skills.github.utils import get_github_token, parse_pr_url
 
 __all__ = [
     "GitHubClient",
     "Job",
     "JobStep",
     "get_github_token",
+    "parse_pr_url",
 ]
