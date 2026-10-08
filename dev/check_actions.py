@@ -38,6 +38,10 @@ _CACHE_PATH = Path(".cache/action-pins.json")
 
 _LS_REMOTE_TIMEOUT = 10
 
+# Downstream-only workflow, excluded here since it's globbed directly and
+# ignores the top-level `exclude` in .pre-commit-config.yaml.
+_EXCLUDED_FILES = {Path(".github/workflows/post-codefreeze-gatekeeper.yaml")}
+
 
 def _load_cache() -> dict[str, bool]:
     if _CACHE_PATH.exists():
@@ -117,7 +121,9 @@ def _iter_files() -> Iterator[Path]:
         "actions/**/*.yml",
         "actions/**/*.yaml",
     ):
-        yield from root.glob(pattern)
+        for path in root.glob(pattern):
+            if path not in _EXCLUDED_FILES:
+                yield path
 
 
 @dataclass(frozen=True, slots=True)
@@ -230,7 +236,9 @@ def _iter_path_patterns(path: Path) -> Iterator[tuple[str, str, str]]:
 def _iter_workflow_files() -> Iterator[Path]:
     root = Path(".github/workflows")
     for ext in ("*.yml", "*.yaml"):
-        yield from root.glob(ext)
+        for path in root.glob(ext):
+            if path not in _EXCLUDED_FILES:
+                yield path
 
 
 def _check_paths() -> Iterator[str]:

@@ -6,15 +6,13 @@ on:
     branches:
       - master
       - branch-[0-9]+.[0-9]+
+      - main
+      - rhoai-*
   pull_request:
     paths-ignore:
       - "docs/**"
       - "**.md"
       - "dev/clint/**"
-      - ".github/workflows/copilot-*.yml"
-      - ".github/workflows/docs.yml"
-      - ".github/workflows/preview-docs.yml"
-      - ".github/workflows/triage.yml"
       - "mlflow/server/js/**"
       - ".github/workflows/js.yml"
       - "libs/typescript/**"
