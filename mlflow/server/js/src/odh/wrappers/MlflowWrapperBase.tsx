@@ -47,6 +47,7 @@ import { HostWorkflowTypeProvider } from '../contexts/ForcedWorkflowTypeProvider
 import type { WorkflowType } from '../../common/contexts/WorkflowTypeContext';
 import AppErrorBoundary from '../../common/components/error-boundaries/AppErrorBoundary';
 import { FederatedPortalContainerContext } from '../utils/portalContainer';
+import { ServerInfoGate } from './ServerInfoGate';
 
 export interface MlflowFederatedShellProps {
   /** Required when using BrowserRouter (page mode). Ignored in MemoryRouter mode. */
@@ -149,6 +150,12 @@ const MlflowWrapperBase: React.FC<MlflowFederatedShellProps> = ({
 
   if (!intl) return <LegacySkeleton />;
 
+  const gatedChildren = (
+    <ServerInfoGate>
+      <React.Suspense fallback={<LegacySkeleton />}>{children}</React.Suspense>
+    </ServerInfoGate>
+  );
+
   const routedContent = (
     <AppErrorBoundary>
       <EmotionThemeProvider theme={PATTERN_FLY_TOKEN_TRANSLATION}>
@@ -157,11 +164,11 @@ const MlflowWrapperBase: React.FC<MlflowFederatedShellProps> = ({
             <ServerInfoProvider>
               <HostWorkflowTypeProvider workflowType={workflowType}>
                 {memoryRouterEntries ? (
-                  <React.Suspense fallback={<LegacySkeleton />}>{children}</React.Suspense>
+                  gatedChildren
                 ) : (
                   <WorkspaceSync>
                     {breadcrumbReporter}
-                    <React.Suspense fallback={<LegacySkeleton />}>{children}</React.Suspense>
+                    {gatedChildren}
                   </WorkspaceSync>
                 )}
               </HostWorkflowTypeProvider>
