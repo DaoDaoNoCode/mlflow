@@ -9,6 +9,7 @@ import { SERVER_FEATURE_KEYS, useFeatureEnabled } from '../../hooks/useServerInf
 import { usePrefetchTraces } from './useEvaluateTraces';
 import { DEFAULT_TRACE_COUNT } from './constants';
 import { useSqlWarehouseContextSafe } from '../experiment-page-tabs/SqlWarehouseContext';
+import { enableScorersUI } from '../../../common/utils/FeatureUtils';
 
 const getScorersDocUrl = () => {
   return 'https://mlflow.org/docs/latest/genai/eval-monitor/scorers/';
@@ -56,7 +57,7 @@ const ExperimentScorersPage: React.FC<ExperimentScorersPageProps> = () => {
   const { theme } = useDesignSystemTheme();
   const intl = useIntl();
   const { experimentId } = useParams();
-  const isFeatureEnabled = useFeatureEnabled(SERVER_FEATURE_KEYS.GATEWAY);
+  const isFeatureEnabled = useFeatureEnabled(SERVER_FEATURE_KEYS.GATEWAY) && enableScorersUI();
 
   const { warehouseId: selectedWarehouseId, traceSearchLocations = [] } = useSqlWarehouseContextSafe() ?? {};
 

@@ -97,6 +97,17 @@ Remote CI, Kubernetes/OpenShift integration tests, and browser visual verificati
 - Follow-up migration checks reached the snapshot comparison on all four databases but failed because pandas 3 inferred string columns and column names as StringDtype, while the pandas 2 baseline pickle used object. Disable future string inference within both snapshot-reading phases, retaining strict frame equality and workspace-backfill checks. A small in-memory SQL probe reproduced the mismatch and verified that the fix still rejects changed data and NULL workspaces; no full migrations were run locally.
 - The follow-up TracesV4 exactly-full-page pagination test exceeded its 30-second CI allowance but passed locally in a focused serial run (one test, about 14 seconds). Leave the upstream test and timeout unchanged and retry the CI job if it recurs.
 
+### Post-rebase UI fixes
+
+Browser review of the new 3.17 traces UI in standalone mode and embedded in odh-dashboard:
+
+- **Federated popups:** the new trace-explorer menus (custom view selector, span-tree display settings, linked prompts) portal to `document.body`, which in the dashboard sits outside `.pf-shell-root`. They now use `useBodyPopupContainer()` (`src/odh/utils/portalContainer.ts`), which returns the enclosing `MlflowWrapperBase`'s own portal container via `FederatedPortalContainerContext` and falls back to `document.body` in standalone. Use it for any new upstream `getPopupContainer={() => document.body}`.
+- **Links:** the TracesV4 saved-view share link, Cmd/Ctrl-click on a traces row, and the review-queue share/"Add traces" links assumed the standalone hash URL and dropped the workspace. They now go through `useAbsoluteRouterHref()` (`src/odh/utils/`), which adds the workspace, the federated basename, or the standalone `#`. Applying or resetting a saved view also keeps the workspace.
+- **Gateway off:** the Judges page again requires `enableScorersUI()` (the server flag alone is `true` while server-info loads or fails), and every "run judge" entry point follows `shouldEnableAIGateway()` via `isEvaluatingTracesInDetailsViewEnabled()`. Assistant entry points need no change: deployed servers report neither a local server nor remote access when `MLFLOW_ENABLE_ASSISTANT=false`, so `canUseAssistant` is already false.
+- **Federated wrappers:** `MlflowWrapperBase` uses `createMlflowQueryClient()` like `app.tsx` (upstream offline-hang fix), and `MlflowTraceDetailWrapper` renders the v2 explorer through `ModelTraceExplorerEntrypoint`. The v2 explorer has no trace-level header (upstream puts it in the drawer), so the wrapper adds an ODH-owned `TraceDetailHeader` with status, trace ID, and root-span latency for the Gen AI playground's "View trace" panel.
+- **PF overrides:** the TracesV4 pagination bar gets the PF pagination look (`_cursor-pagination.scss`) and is excluded from the footer action-group layout; primary buttons inside trace drawers keep the PF brand color (`_trace-explorer.scss`); the stray grouped-by-session header underline is removed; the dead `mlflow_sidebar.new_button` selector is gone.
+- **Not changed:** upstream bugs reported rather than patched: session chips truncate at the 100px default column width, and the `TimelineTreeFilterButton` snackbar has no mounted host. Du Bois modals that never finish their open animation in local odh-dashboard dev come from the host's `React.StrictMode` with `rc-motion` 2.4.4 and do not occur in production builds.
+
 ---
 
 ## Rebase: v3.14.0 → v3.15.2
