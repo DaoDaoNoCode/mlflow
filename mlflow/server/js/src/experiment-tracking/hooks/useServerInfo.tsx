@@ -21,6 +21,7 @@ interface ServerInfoResponse {
  */
 export const SERVER_FEATURE_KEYS = {
   GATEWAY: 'gateway',
+  TELEMETRY: 'telemetry',
 } as const;
 
 export type FeatureKey = (typeof SERVER_FEATURE_KEYS)[keyof typeof SERVER_FEATURE_KEYS];

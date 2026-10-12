@@ -15,6 +15,7 @@ import {
 import { FieldLabel } from './FieldLabel';
 import { useResourceOptionsQuery } from '../hooks';
 import { PERMISSIONS, getGrantablePermissions, getResourceTypeLabel, isWildcardOnlyResourceType } from '../types';
+import { withoutDisabledGatewayResourceTypes } from '../../odh/gateway/gatewayFilters';
 
 // Resource types eligible for per-user direct grants. ``workspace`` is excluded
 // because the backend's ``grant_user_resource_permission`` rejects it (workspace
@@ -95,6 +96,7 @@ export const DirectPermissionForm = ({
 }: DirectPermissionFormProps) => {
   const { theme } = useDesignSystemTheme();
   const [search, setSearch] = useState('');
+  const resourceTypes = withoutDisabledGatewayResourceTypes(DIRECT_GRANT_RESOURCE_TYPES);
   const {
     options: resourceOptions,
     isLoading: resourceOptionsLoading,
@@ -138,7 +140,7 @@ export const DirectPermissionForm = ({
           }}
           disabled={disabled}
         >
-          {DIRECT_GRANT_RESOURCE_TYPES.map((rt) => (
+          {resourceTypes.map((rt) => (
             <SimpleSelectOption key={rt} value={rt}>
               {getResourceTypeLabel(rt)}
             </SimpleSelectOption>

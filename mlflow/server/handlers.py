@@ -7515,6 +7515,7 @@ def build_server_info_payload() -> dict[str, Any]:
         SERVER_INFO_PRESIGNED_UPLOAD_MODEL_ID_SUPPORTED: True,
         SERVER_INFO_FEATURES_ENABLED: {
             "gateway": MLFLOW_ENABLE_AI_GATEWAY.get(),
+            "telemetry": not is_telemetry_disabled(),
         },
     }
 
