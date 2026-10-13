@@ -4279,6 +4279,10 @@
     "defaultMessage": "{action} endpoint {url}",
     "description": "Aria label for expanding/collapsing an access endpoint row"
   },
+  "FSI2V8": {
+    "defaultMessage": "Appearance, product feedback, and workspace demo data.",
+    "description": "Settings content section subtitle for general preferences when UI telemetry is disabled by the server"
+  },
   "FSICUH": {
     "defaultMessage": "Create new endpoint",
     "description": "Option in the assistant provider picker that opens the gateway endpoint creation page"

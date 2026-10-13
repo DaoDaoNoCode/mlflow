@@ -95,6 +95,7 @@ import {
   useRunJudgesOnTracesConfiguration,
 } from '../../../../pages/experiment-scorers/hooks/useRunScorerInTracesViewConfiguration';
 import { IssueDetectionModal } from './IssueDetectionModal';
+import { shouldEnableIssueDetection } from '../../../../../common/utils/FeatureUtils';
 import { useCountInfo } from './hooks/useCountInfo';
 import { useAssessmentCountMetrics } from './hooks/useAssessmentCountMetrics';
 import { useScorerDescriptions } from '../../../../pages/experiment-scorers/hooks/useScorerDescriptions';
@@ -804,7 +805,7 @@ const TracesV3LogsImpl = React.memo(
             {JudgesStatusBanner}
             {renderMainContent()}
           </div>
-          {!disableActions && isIssueDetectionModalOpen && (
+          {!disableActions && shouldEnableIssueDetection() && isIssueDetectionModalOpen && (
             <IssueDetectionModal
               key={singleExperimentId}
               onClose={() => setIsIssueDetectionModalOpen(false)}
