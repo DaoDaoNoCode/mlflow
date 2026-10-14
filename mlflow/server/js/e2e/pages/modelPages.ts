@@ -167,5 +167,6 @@ export class LoggedModelDetailPage {
     await expect(this.findModelNameInput()).toBeVisible({ timeout: Timeout.medium });
     await this.findModelNameInput().fill(modelName);
     await this.findConfirmRegisterButton().click();
+    await expect(this.page.getByRole('dialog')).not.toBeVisible({ timeout: Timeout.long });
   }
 }

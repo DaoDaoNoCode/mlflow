@@ -37,8 +37,9 @@ test('GenAI observability and evaluation cycle', async ({
   agentVersionsTabPage,
   scorersTabPage,
 }) => {
-  const suffix = process.env.MLFLOW_E2E_SUFFIX;
-  if (!suffix) throw new Error('MLFLOW_E2E_SUFFIX is required');
+  const runSuffix = process.env.MLFLOW_E2E_SUFFIX;
+  if (!runSuffix) throw new Error('MLFLOW_E2E_SUFFIX is required');
+  const suffix = `${runSuffix}-${test.info().retry}`;
   const fullExperimentName = `${experimentName}-${suffix}`;
   const fullDatasetName = `${datasetName}-${suffix}`;
   let experimentId: string | undefined;
