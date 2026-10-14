@@ -212,7 +212,7 @@ jobs:
       - name: Verify MLflow is serving
         run: |
           curl --retry 5 --retry-delay 5 --retry-all-errors --fail \
-            "$MLFLOW_E2E_BASE_URL/api/2.0/mlflow/experiments/search"
+            "$MLFLOW_E2E_BASE_URL/api/2.0/mlflow/experiments/search?max_results=1"
 
       - name: Run e2e tests
         run: yarn test:e2e

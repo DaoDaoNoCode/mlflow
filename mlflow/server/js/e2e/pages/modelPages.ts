@@ -9,7 +9,7 @@ export class ModelRegistryPage {
     const qs = new URLSearchParams({ workspace }).toString();
     await this.page.goto(`/#/models?${qs}`);
     await this.page.evaluate(() => {
-      localStorage.setItem('_mlflow_model_registry_promo_modal_dismissed', 'true');
+      localStorage.setItem('_mlflow_model_registry_promo_modal_dismissed_v1', 'true');
     });
     await this.page.reload();
   }
