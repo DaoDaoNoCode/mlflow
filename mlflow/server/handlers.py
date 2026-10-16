@@ -5558,6 +5558,7 @@ def _validate_trace_ids_in_experiment(
 
 @catch_mlflow_exception
 @_disable_if_artifacts_only
+@_disable_if_gateway_disabled
 def _invoke_issue_detection_handler():
     """
     Invoke issue detection on traces asynchronously.
@@ -7557,6 +7558,7 @@ def build_server_info_payload() -> dict[str, Any]:
         SERVER_INFO_PRESIGNED_UPLOAD_MODEL_ID_SUPPORTED: True,
         SERVER_INFO_FEATURES_ENABLED: {
             "gateway": MLFLOW_ENABLE_AI_GATEWAY.get(),
+            "telemetry": not is_telemetry_disabled(),
         },
         SERVER_INFO_TRACKING_AUTH: MLFLOW_SERVER_INFO_TRACKING_AUTH.get() or "",
     }
@@ -7615,6 +7617,7 @@ def _get_secrets_config():
 
 @catch_mlflow_exception
 @_disable_if_artifacts_only
+@_disable_if_gateway_disabled
 def _invoke_scorer_handler():
     """
     Invoke a scorer on traces asynchronously.

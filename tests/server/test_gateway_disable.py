@@ -108,6 +108,8 @@ def test_gateway_endpoints_pass_through_when_enabled():
         "_list_supported_models",
         "_get_provider_config",
         "_get_secrets_config",
+        "_invoke_issue_detection_handler",
+        "_invoke_scorer_handler",
     ],
 )
 def test_flask_gateway_handlers_return_501_when_disabled(monkeypatch, handler_name):

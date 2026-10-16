@@ -131,11 +131,12 @@ def log_everything():
                 last_updated_by="user",
             )
         )
+        job_name_column = "job_name" if "job_name" in jobs_table.columns else "function_fullname"
         conn.execute(
             sa.insert(jobs_table).values(
                 id=uuid.uuid4().hex,
                 creation_time=0,
-                job_name="tests.db.check_migration.log_everything",
+                **{job_name_column: "tests.db.check_migration.log_everything"},
                 params="{}",
                 timeout=None,
                 status=0,
@@ -161,7 +162,7 @@ def pre_migration(verbose):
     for _ in range(5):
         log_everything()
     SNAPSHOTS_DIR.mkdir(exist_ok=True)
-    with connect_to_mlflow_db() as conn:
+    with pd.option_context("future.infer_string", False), connect_to_mlflow_db() as conn:
         for table in TABLES:
             df = pd.read_sql(sa.text(f"SELECT * FROM {table}"), conn)
             df.to_pickle(SNAPSHOTS_DIR / f"{table}.pkl")
@@ -172,7 +173,8 @@ def pre_migration(verbose):
 
 @cli.command()
 def post_migration():
-    with connect_to_mlflow_db() as conn:
+    # Match the pandas 2 snapshot representation while retaining strict data and dtype checks.
+    with pd.option_context("future.infer_string", False), connect_to_mlflow_db() as conn:
         for table in TABLES:
             df_actual = pd.read_sql(sa.text(f"SELECT * FROM {table}"), conn)
             df_expected = pd.read_pickle(SNAPSHOTS_DIR / f"{table}.pkl")
