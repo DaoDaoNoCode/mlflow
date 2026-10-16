@@ -71,7 +71,7 @@ services:
     restart: "no"
 
   mlflow:
-    image: ghcr.io/mlflow/mlflow:${MLFLOW_VERSION}
+    image: ${MLFLOW_IMAGE:-ghcr.io/mlflow/mlflow:${MLFLOW_VERSION}}
     container_name: mlflow-server
     depends_on:
       postgres:
@@ -99,13 +99,17 @@ services:
       - /bin/bash
       - -c
       - |
-        pip install --no-cache-dir "psycopg[binary]" psycopg2-binary boto3
+        set -e
+        if ! python -c 'import psycopg, psycopg2, boto3'; then
+          python -m pip install --no-cache-dir "psycopg[binary]" psycopg2-binary boto3
+        fi
         mlflow server \
           --backend-store-uri "${MLFLOW_BACKEND_STORE_URI}" \
           --artifacts-destination "${MLFLOW_ARTIFACTS_DESTINATION}" \
           --serve-artifacts \
           --host "${MLFLOW_HOST}" \
-          --port "${MLFLOW_PORT}"
+          --port "${MLFLOW_PORT}" \
+          ${MLFLOW_EXTRA_ARGS:-}
     ports:
       - "${MLFLOW_PORT}:${MLFLOW_PORT}"
     healthcheck:
