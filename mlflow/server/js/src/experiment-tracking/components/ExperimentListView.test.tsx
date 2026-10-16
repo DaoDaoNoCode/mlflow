@@ -83,7 +83,7 @@ const mountComponent = (props: { experiments: any[]; tagsFilter?: any[]; filterB
 test('If button to create experiment is pressed then open CreateExperimentModal', async () => {
   mountComponent({ experiments: Fixtures.experiments });
   await userEvent.click(screen.getByTestId('create-experiment-table-empty-state-button'));
-  expect(screen.getByText('Create Experiment')).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'Create experiment' })).toBeInTheDocument();
 });
 
 test('should render when experiments are empty', () => {

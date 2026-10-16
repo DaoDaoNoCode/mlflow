@@ -31,6 +31,7 @@ interface ServerInfoResponse {
  */
 export const SERVER_FEATURE_KEYS = {
   GATEWAY: 'gateway',
+  TELEMETRY: 'telemetry',
 } as const;
 
 export type FeatureKey = (typeof SERVER_FEATURE_KEYS)[keyof typeof SERVER_FEATURE_KEYS];
@@ -192,8 +193,10 @@ export const getMultipartDownloadsEnabledSync = (): boolean => {
 /**
  * Subscribes React components to a server feature value and re-renders when server-info loads.
  * Prefer this hook in React render paths.
+ * ODH: features default to off, so gateway UI stays hidden while server-info is loading, after it
+ * fails, and against servers without `features_enabled`.
  */
-export const useFeatureEnabled = (key: FeatureKey, defaultValue = true): boolean => {
+export const useFeatureEnabled = (key: FeatureKey, defaultValue = false): boolean => {
   const { data } = useServerInfo();
   return data?.features_enabled?.[key] ?? defaultValue;
 };
@@ -202,7 +205,7 @@ export const useFeatureEnabled = (key: FeatureKey, defaultValue = true): boolean
  * Reads a server feature from the current cache without subscribing to updates.
  * Use this accessor only where React hooks are unavailable.
  */
-export const getFeatureEnabledSync = (key: FeatureKey, defaultValue = true): boolean => {
+export const getFeatureEnabledSync = (key: FeatureKey, defaultValue = false): boolean => {
   const cachedData = queryClientRef?.getQueryData<ServerInfoResponse>([SERVER_INFO_QUERY_KEY]);
   return cachedData?.features_enabled?.[key] ?? defaultValue;
 };

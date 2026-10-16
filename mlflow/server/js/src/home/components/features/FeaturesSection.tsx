@@ -47,6 +47,7 @@ export const FeaturesSection = () => {
         <div css={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: theme.spacing.md }}>
           <LaunchDemoCard />
           <div
+            className="mlflow-home-feature-cards"
             css={{
               display: 'flex',
               gap: theme.spacing.sm,

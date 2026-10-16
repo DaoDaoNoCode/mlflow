@@ -15,6 +15,7 @@ import {
 import { FieldLabel } from './FieldLabel';
 import { useResourceOptionsQuery } from '../hooks';
 import { useWorkspacesEnabled } from '../../experiment-tracking/hooks/useServerInfo';
+import { withoutDisabledGatewayResourceTypes } from '../../odh/gateway/gatewayFilters';
 import {
   ALL_RESOURCE_PATTERN_LABEL,
   PERMISSIONS,
@@ -84,6 +85,7 @@ export const RolePermissionForm = ({
     () => (workspacesEnabled || workspacesLoading ? RESOURCE_TYPES : RESOURCE_TYPES.filter((rt) => rt !== 'workspace')),
     [workspacesEnabled, workspacesLoading],
   );
+  const visibleResourceTypes = withoutDisabledGatewayResourceTypes(resourceTypes);
 
   const typeLabel = getResourceTypeLabel(value.resourceType);
 
@@ -133,7 +135,7 @@ export const RolePermissionForm = ({
           }}
           disabled={disabled}
         >
-          {resourceTypes.map((rt) => (
+          {visibleResourceTypes.map((rt) => (
             <SimpleSelectOption key={rt} value={rt}>
               {getResourceTypeLabel(rt)}
             </SimpleSelectOption>

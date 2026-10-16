@@ -17,6 +17,7 @@ import {
 import { FormattedMessage } from 'react-intl';
 import { shouldEnableExperimentOverviewTab } from '@mlflow/mlflow/src/common/utils/FeatureUtils';
 import { SERVER_FEATURE_KEYS, useFeatureEnabled } from '../../../hooks/useServerInfo';
+import { isIntegrated } from '@mlflow/mlflow/src/common/utils/embedUtils';
 
 export const FULL_WIDTH_CLASS_NAME = 'mlflow-experiment-page-side-nav-full';
 export const COLLAPSED_CLASS_NAME = 'mlflow-experiment-page-side-nav-collapsed';
@@ -106,17 +107,21 @@ const ExperimentPageSideNavGenAIConfig = {
       tabName: ExperimentPageTabName.Playground,
       componentId: 'mlflow.experiment-side-nav.genai.playground',
     },
-    {
-      label: (
-        <FormattedMessage
-          defaultMessage="Prompts"
-          description="Label for the prompts tab in the MLflow experiment navbar"
-        />
-      ),
-      icon: <TextBoxIcon />,
-      tabName: ExperimentPageTabName.Prompts,
-      componentId: 'mlflow.experiment-side-nav.genai.prompts',
-    },
+    ...(isIntegrated()
+      ? []
+      : [
+          {
+            label: (
+              <FormattedMessage
+                defaultMessage="Prompts"
+                description="Label for the prompts tab in the MLflow experiment navbar"
+              />
+            ),
+            icon: <TextBoxIcon />,
+            tabName: ExperimentPageTabName.Prompts,
+            componentId: 'mlflow.experiment-side-nav.genai.prompts',
+          },
+        ]),
     {
       label: (
         <FormattedMessage
@@ -186,10 +191,15 @@ export const getExperimentPageSideNavSectionLabel = (
         />
       );
     case 'prompts-versions':
-      return (
+      return items.some((item) => item.tabName === ExperimentPageTabName.Prompts) ? (
         <FormattedMessage
           defaultMessage="Prompts & versions"
           description="Label for the versions section in the MLflow experiment navbar"
+        />
+      ) : (
+        <FormattedMessage
+          defaultMessage="Versions"
+          description="Label for the versions section in the MLflow experiment navbar when the prompts tab is not shown"
         />
       );
     default:

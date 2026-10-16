@@ -2,6 +2,7 @@ import type { RouteHandle } from '../common/utils/RoutingUtils';
 import { createLazyRouteElement, DEFAULT_ASSISTANT_PROMPTS } from '../common/utils/RoutingUtils';
 
 import { PageId, RoutePaths } from './routes';
+import { withGatewayFeature } from '../odh/gateway/GatewayFeatureRoute';
 
 const getPromptPagesRouteDefs = () => {
   return [
@@ -215,7 +216,7 @@ const getExperimentPageRouteDefs = () => {
         {
           path: RoutePaths.experimentPageTabPlayground,
           pageId: PageId.experimentPageTabPlayground,
-          element: createLazyRouteElement(() => import('./pages/playground/PlaygroundPage')),
+          element: withGatewayFeature(createLazyRouteElement(() => import('./pages/playground/PlaygroundPage'))),
           handle: {
             getPageTitle: (params) => `Playground - Experiment ${params['experimentId']}`,
           } satisfies RouteHandle,

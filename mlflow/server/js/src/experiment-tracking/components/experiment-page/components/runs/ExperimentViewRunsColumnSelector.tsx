@@ -24,6 +24,8 @@ import {
 } from '../../utils/experimentPage.common-utils';
 import type { ExperimentRunsSelectorResult } from '../../utils/experimentRuns.selector';
 import { customMetricBehaviorDefs } from '../../utils/customMetricBehaviorUtils';
+import { fireMiscTrackingEvent, getSafeColumnName } from '../../../../../odh/analytics/segmentUtils';
+import { MLflowEventNames, RunsColumnAction } from '../../../../../odh/analytics/trackingProperties';
 
 /**
  * We need to recreate antd's tree check callback signature since it's not importable
@@ -227,6 +229,13 @@ export const ExperimentViewRunsColumnSelector = React.memo(
     // This callback toggles entire group of keys
     const toggleGroup = useCallback(
       (isChecked: boolean, keyList: string[]) => {
+        const action = isChecked ? RunsColumnAction.removed : RunsColumnAction.added;
+        keyList.forEach((key) => {
+          fireMiscTrackingEvent(MLflowEventNames.RUNS_COLUMN_MODIFIED, {
+            ...getSafeColumnName(key),
+            action,
+          });
+        });
         if (!isChecked) {
           setCheckedColumns((checked) => [...checked, ...keyList]);
         } else {
@@ -239,6 +248,10 @@ export const ExperimentViewRunsColumnSelector = React.memo(
     // This callback is intended to select/deselect a single key
     const toggleSingleKey = useCallback(
       (key: string, isChecked: boolean) => {
+        fireMiscTrackingEvent(MLflowEventNames.RUNS_COLUMN_MODIFIED, {
+          ...getSafeColumnName(key),
+          action: isChecked ? RunsColumnAction.removed : RunsColumnAction.added,
+        });
         if (!isChecked) {
           setCheckedColumns((checked) => [...checked, key]);
         } else {
