@@ -3263,6 +3263,10 @@
     "defaultMessage": "No assessments available",
     "description": "Message shown when there are no assessments to display"
   },
+  "AIkHKU": {
+    "defaultMessage": "The GenAI view of this experiment is on the Agent traces page.",
+    "description": "Notice shown when the GenAI workflow is picked on the model training experiment page"
+  },
   "AIun3p": {
     "defaultMessage": "e.g. get_weather",
     "description": "Placeholder for the tool function name input in the playground Tools card"
@@ -15014,6 +15018,10 @@
   "rt9clc": {
     "defaultMessage": "Return a 400 error with the guardrail name and reason. The original request or response is not passed through.",
     "description": "Block action description"
+  },
+  "rtSZze": {
+    "defaultMessage": "Open this experiment in Agent traces →",
+    "description": "Link from the model training experiment page to the same experiment on the Agent traces page"
   },
   "ruFdDg": {
     "defaultMessage": "Output",

@@ -1809,6 +1809,9 @@ module.exports = {
   "mlflow.notebook.trace-ui-learn-more-link": "",
   "mlflow.notebook.trace-ui-see-in-mlflow-link": "",
 
+  // -- mlflow.odh --
+  "mlflow.odh.experiment-page.agent-traces-notice.open": "",
+
   // -- mlflow.overview --
   "mlflow.overview.quality.assessment.view_traces_link": "",
   "mlflow.overview.quality.assessment_timeseries.view_traces_link": "",

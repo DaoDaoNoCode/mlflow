@@ -27,6 +27,7 @@ import { flexColumnContainerStyles, headerIconStyles } from '../styles';
 import SkillRegistryRoutes from '../routes';
 import { hasSkillCatalogFilters } from '../utils';
 import type { SkillSourceType } from '../types';
+import { isIntegrated } from '../../common/utils/embedUtils';
 
 const isPermissionDeniedError = (error: Error | undefined) =>
   error instanceof PermissionError || error?.name === 'PermissionError';
@@ -93,6 +94,13 @@ const SkillRegistryPage = () => {
     Boolean(unfilteredSkills?.length) ||
     Boolean(unfilteredError);
   const openRegister = () => setRegisterOpen(true);
+  // Embedded in the dashboard, the host renders the page title, so Create moves next to the filters.
+  const integrated = isIntegrated();
+  const createButton = showHeaderCreate ? (
+    <Button componentId="mlflow.skill_registry.create" type="primary" icon={<PlusIcon />} onClick={openRegister}>
+      <FormattedMessage defaultMessage="Create skill" description="Button that opens skill registration" />
+    </Button>
+  ) : undefined;
 
   useEffect(() => {
     let added = false;
@@ -109,44 +117,48 @@ const SkillRegistryPage = () => {
 
   return (
     <ScrollablePageWrapper css={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', flex: 1 }}>
-      <Spacer shrinks={false} />
-      <Header
-        title={
-          <span css={{ display: 'flex', alignItems: 'center', gap: theme.spacing.sm }}>
-            <span css={headerIconStyles(theme)}>
-              <PuzzleIcon />
-            </span>
-            <FormattedMessage defaultMessage="Skills" description="Skill Registry page title" />
-            <SkillRegistryBetaTag />
-          </span>
-        }
-        buttons={
-          showHeaderCreate ? (
-            <Button
-              componentId="mlflow.skill_registry.create"
-              type="primary"
-              icon={<PlusIcon />}
-              onClick={openRegister}
-            >
-              <FormattedMessage defaultMessage="Create skill" description="Button that opens skill registration" />
-            </Button>
-          ) : undefined
-        }
-      />
-      <Spacer shrinks={false} />
-      <div css={flexColumnContainerStyles}>
-        <div css={{ flexShrink: 0, width: '100%' }}>
-          <SkillListFilters
-            searchFilter={searchFilter}
-            onSearchFilterChange={setSearchFilter}
-            filterActive={filterActive}
-            onFilterActiveChange={setFilterActive}
-            organization={organization}
-            onOrganizationChange={setOrganization}
-            organizations={organizations}
-            sourceType={sourceType}
-            onSourceTypeChange={setSourceType}
+      {!integrated && (
+        <>
+          <Spacer shrinks={false} />
+          <Header
+            title={
+              <span css={{ display: 'flex', alignItems: 'center', gap: theme.spacing.sm }}>
+                <span css={headerIconStyles(theme)}>
+                  <PuzzleIcon />
+                </span>
+                <FormattedMessage defaultMessage="Skills" description="Skill Registry page title" />
+                <SkillRegistryBetaTag />
+              </span>
+            }
+            buttons={createButton}
           />
+          <Spacer shrinks={false} />
+        </>
+      )}
+      <div css={flexColumnContainerStyles}>
+        <div
+          css={{
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: theme.spacing.sm,
+            flexShrink: 0,
+            width: '100%',
+          }}
+        >
+          <div css={{ flex: 1 }}>
+            <SkillListFilters
+              searchFilter={searchFilter}
+              onSearchFilterChange={setSearchFilter}
+              filterActive={filterActive}
+              onFilterActiveChange={setFilterActive}
+              organization={organization}
+              onOrganizationChange={setOrganization}
+              organizations={organizations}
+              sourceType={sourceType}
+              onSourceTypeChange={setSourceType}
+            />
+          </div>
+          {integrated && createButton}
         </div>
         {isPermissionDenied ? (
           <div
